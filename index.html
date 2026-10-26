@@ -575,13 +575,46 @@
   }
 
   .heroes {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
     background: var(--night);
     color: var(--paper);
-    padding: 4.2rem 0 4.6rem;
+    min-height: 34rem;
+    display: grid;
+    align-items: end;
+  }
+  .heroes-img {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 32%;
+  }
+  .heroes-shade {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background:
+      linear-gradient(90deg, rgba(8, 22, 16, 0.88) 0%, rgba(8, 22, 16, 0.62) 46%, rgba(8, 22, 16, 0.28) 100%),
+      linear-gradient(180deg, rgba(8, 22, 16, 0.2) 0%, rgba(8, 22, 16, 0.55) 100%);
   }
   .heroes .inner {
+    position: relative;
+    z-index: 1;
     width: min(1120px, calc(100% - 8vw));
     margin: 0 auto;
+    padding: 4.2rem 0 2.4rem;
+  }
+  .heroes-cap {
+    max-width: 36rem;
+    margin: 1.5rem 0 0;
+    font-family: Outfit, "Avenir Next", sans-serif;
+    font-size: 0.78rem;
+    line-height: 1.45;
+    color: var(--mist);
   }
   .heroes-line {
     margin: 0;
@@ -962,6 +995,12 @@
 </section>
 
 <section class="heroes" id="the-heroes">
+  <img class="heroes-img" src="images/heroes-company.jpg" alt="Soldiers of the French army, posed outdoors. Their names are not on this page. Not a photograph of Dornville."
+    data-alt-en="Soldiers of the French army, posed outdoors. Their names are not on this page. Not a photograph of Dornville."
+    data-alt-fr="Soldats de l’armée française, en groupe, dehors. Leurs noms ne sont pas sur cette page. Ce n’est pas une photographie de Dornville."
+    data-alt-kr="Sòlda lamé franse-a, an gwoup, deyò. Non yo pa asou paj tala. Sé pa yon foto Dornville."
+    data-alt-de="Soldaten der französischen Armee, draußen in einer Gruppe. Ihre Namen stehen nicht auf dieser Seite. Keine Fotografie von Dornville.">
+  <div class="heroes-shade"></div>
   <div class="inner">
     <p class="eyebrow"><span class="en">The true heroes</span><span class="fr">Les vrais héros</span><span class="kr">Vrè ewo-a</span><span class="de">Die wahren Helden</span></p>
     <p class="heroes-line en">The forgotten Black soldiers. From Martinique to Guyane, they did the work.</p>
@@ -972,6 +1011,10 @@
     <p class="heroes-note fr">Dornville est un nom sur ce rôle. Né en Guyane, et, dans le souvenir de la famille, environ six ans en Martinique avant Verdun. Le Livre d’Or de 1924 imprime les autres avec lui.</p>
     <p class="heroes-note kr">Dornville sé yon non asou woulo tala. I fèt Giyàn, épi, an souvni fanmi-an, anviron si lanné Matinik avan Vèrdin. Liv dò 1924 ka enprimé lòt-yo épi li.</p>
     <p class="heroes-note de">Dornville steht auf dieser Liste. Er wurde in Guyane geboren und war, nach der Familienerinnerung, etwa sechs Jahre in Martinique, bevor er nach Verdun kam. Das Livre d’Or von 1924 führt die anderen Namen neben ihm.</p>
+    <p class="heroes-cap en">Soldiers of the French army. Their names are not on this page. Not a photograph of Dornville.</p>
+    <p class="heroes-cap fr">Soldats de l’armée française. Leurs noms ne sont pas sur cette page. Ce n’est pas une photographie de Dornville.</p>
+    <p class="heroes-cap kr">Sòlda lamé franse-a. Non yo pa asou paj tala. Sé pa yon foto Dornville.</p>
+    <p class="heroes-cap de">Soldaten der französischen Armee. Ihre Namen stehen nicht auf dieser Seite. Keine Fotografie von Dornville.</p>
   </div>
 </section>
 
