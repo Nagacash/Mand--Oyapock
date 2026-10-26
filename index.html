@@ -294,6 +294,12 @@
     padding: 18vh 0 8.5rem;
   }
 
+  .hero-mark {
+    width: 6.75rem;
+    height: 6.75rem;
+    margin: 0 0 1.35rem;
+  }
+
   .eyebrow {
     font-family: Outfit, "Avenir Next", sans-serif;
     font-size: 0.74rem;
@@ -395,7 +401,7 @@
   /* ---------- Chapters nav ---------- */
   .chapters {
     position: sticky;
-    top: 2.7rem;
+    top: 4.15rem;
     z-index: 6;
     display: flex;
     flex-wrap: wrap;
@@ -776,7 +782,7 @@
     width: min(1120px, calc(100% - 8vw));
     margin: 0 auto;
   }
-  .langs {
+  .topbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -784,11 +790,31 @@
     z-index: 25;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: flex-end;
-    gap: 0.2rem;
-    padding: 0.45rem max(0.75rem, calc((100% - 1120px) / 2));
+    gap: 0.35rem 0.75rem;
+    min-height: 4.15rem;
+    padding: 0.4rem max(0.75rem, calc((100% - 1120px) / 2));
     background: rgba(8, 22, 16, 0.88);
     border-bottom: 1px solid rgba(243, 238, 230, 0.14);
+  }
+
+  .langs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.2rem;
+  }
+
+  .site-mark {
+    margin-right: auto;
+    display: flex;
+    line-height: 0;
+  }
+
+  .site-mark img {
+    width: 3.15rem;
+    height: 3.15rem;
   }
 
   .langs button {
@@ -864,6 +890,10 @@
   }
 
   @media (max-width: 560px) {
+    .topbar { min-height: 3.55rem; }
+    .chapters { top: 3.55rem; }
+    .site-mark img { width: 2.55rem; height: 2.55rem; }
+    .hero-mark { width: 5.25rem; height: 5.25rem; }
     .langs button { font-size: 0.62rem; letter-spacing: 0.06em; padding: 0.34rem 0.42rem; }
     .ledger { width: calc(100% - 1.25rem); }
     .ledger ol { grid-template-columns: 1fr; }
@@ -886,11 +916,14 @@
 
 <a class="skip" href="#story"><span class="en">Skip to the story</span><span class="fr">Aller au récit</span><span class="kr">Ay an istwa-a</span><span class="de">Zur Geschichte</span></a>
 
+<div class="topbar">
+  <a class="site-mark" href="#story" aria-label="Mandé"><img src="apple-touch-icon.png" alt="" width="50" height="50"></a>
 <div class="langs" role="tablist" aria-label="Language" data-label-en="Language" data-label-fr="Langue" data-label-kr="Lang" data-label-de="Sprache">
   <button type="button" role="tab" data-set="en" aria-selected="false">English</button>
   <button type="button" role="tab" data-set="fr" aria-selected="true">Français</button>
   <button type="button" role="tab" data-set="kr" aria-selected="false" title="Kréyòl lézantiy franse-a">Kriyòl</button>
   <button type="button" role="tab" data-set="de" aria-selected="false">Deutsch</button>
+</div>
 </div>
 
 <header class="hero">
@@ -901,6 +934,7 @@
     data-alt-kr="Yon imaj Oyapòk lè jou ka lévé : yon rivyè nwè ant dé miray bwa, épi yon kanno vid. Sé pa yon foto 1885." data-alt-de="Evokation des Oyapock im ersten Licht: ein dunkler Fluss zwischen Wänden aus Regenwald und ein leeres Einbaumkanu. Keine Fotografie von 1885.">
   <div class="hero-shade"></div>
   <div class="hero-copy">
+    <img class="hero-mark" src="apple-touch-icon.png" alt="Mandé" width="108" height="108">
     <p class="eyebrow">Oyapock · Guyane française</p>
     <h1>Dornville<br>Jean-Louis<br>Mandé</h1>
     <p class="dates"><span class="en">19 September 1885 — 6 March 1950</span><span class="fr">19 septembre 1885 — 6 mars 1950</span><span class="kr">19 sèptanm 1885 — 6 mas 1950</span><span class="de">19. September 1885 — 6. März 1950</span></p>
