@@ -170,6 +170,7 @@
       document.documentElement.setAttribute("data-lang", savedLang);
       document.documentElement.lang = savedLang === "kr" ? "gcf" : savedLang;
     }
+    if (localStorage.getItem("mande-cookie") === "1") document.documentElement.classList.add("cookie-ok");
   } catch (e) {}
 </script>
 <style>
@@ -910,6 +911,55 @@
     line-height: 1.5;
   }
 
+  html:not(.cookie-ok) footer { padding-bottom: 7.5rem; }
+  .cookie {
+    position: fixed;
+    z-index: 40;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.85rem 1.4rem;
+    padding: 0.85rem 6vw;
+    background: var(--night);
+    color: var(--paper);
+    border-top: 1px solid rgba(198, 163, 106, 0.45);
+    box-shadow: 0 -12px 36px rgba(0, 0, 0, 0.28);
+  }
+  html.cookie-ok .cookie { display: none; }
+  .cookie p {
+    margin: 0;
+    flex: 1 1 18rem;
+    max-width: none;
+    font-family: Outfit, "Avenir Next", sans-serif;
+    font-size: 0.86rem;
+    line-height: 1.45;
+    color: var(--paper);
+  }
+  .cookie .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.85rem;
+  }
+  .cookie button {
+    appearance: none;
+    border: 0;
+    background: var(--clay);
+    color: var(--night);
+    font-family: Outfit, "Avenir Next", sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.55rem 0.85rem;
+    cursor: pointer;
+  }
+  .cookie a { color: var(--clay); }
+
   .js .reveal {
     opacity: 0;
     transform: translateY(16px);
@@ -977,13 +1027,13 @@
   <div class="hero-shade"></div>
   <div class="hero-copy">
     <img class="hero-mark" src="apple-touch-icon.png" alt="Mandé" width="108" height="108">
-    <p class="eyebrow"><a href="https://en.wikipedia.org/wiki/Oyapock">Oyapock</a> · Guyane française</p>
+    <p class="eyebrow"><a href="https://en.wikipedia.org/wiki/Oyapock" target="_blank" rel="noopener">Oyapock</a> · Guyane française</p>
     <h1>Dornville<br>Jean-Louis<br>Mandé</h1>
     <p class="dates"><span class="en">19 September 1885 — 6 March 1950</span><span class="fr">19 septembre 1885 — 6 mars 1950</span><span class="kr">19 sèptanm 1885 — 6 mas 1950</span><span class="de">19. September 1885 — 6. März 1950</span></p>
-    <p class="lede en">Dornville Mandé, born in <a href="https://en.wikipedia.org/wiki/Oyapock">Oyapock</a> in 1885, was a Zouave at the <a href="https://en.wikipedia.org/wiki/Battle_of_Verdun">Battle of Verdun</a> – the most brutal trench warfare of the First World War, where soldiers endured months of mud and heavy artillery fire. Despite his frozen feet, he did not abandon his unit until the liberation. From the jungle of the Oyapock to the highest honors one can receive: for his extraordinary bravery, he was awarded the Croix de Guerre with palm, the Médaille Militaire, and the <a href="https://www.legiondhonneur.fr/en">Légion d’Honneur</a> – just like his compatriot Félix Éboué. Afterwards, he returned home, raised a family, and managed the prison in Cayenne. Four generations. One city. One name.</p>
-    <p class="lede fr">Dornville Mandé, né à <a href="https://fr.wikipedia.org/wiki/Oyapock">Oyapock</a> en 1885, fut zouave à la <a href="https://fr.wikipedia.org/wiki/Bataille_de_Verdun">bataille de Verdun</a> – la plus cruelle de la Première Guerre mondiale, où les soldats endurèrent des mois de boue et de bombardements intenses. Malgré ses pieds gelés, il ne lâcha pas son unité jusqu’à la libération. De la jungle de l’Oyapock aux plus hautes distinctions qu’un homme puisse recevoir : pour son courage exceptionnel, il fut décoré de la Croix de Guerre avec palme, de la Médaille militaire et de la <a href="https://www.legiondhonneur.fr/fr">Légion d’honneur</a> – tout comme son compatriote Félix Éboué. Par la suite, il rentra chez lui, éleva une famille et dirigea la prison de Cayenne. Quatre générations. Une ville. Un nom.</p>
-    <p class="lede kr">Dornville Mandé, fèt an <a href="https://en.wikipedia.org/wiki/Oyapock">Oyapòk</a> an 1885, té yon zouav an <a href="https://en.wikipedia.org/wiki/Battle_of_Verdun">batay Vèrdin</a> – pi gwo lagè tranché Premyé Lagè Mondyal-la, kote sòlda-yo té rété mwa an labou anba gwo difé kanon. Menm si pyé-li té fwèt, i pa kite inité-li jis tan libérasyon-an. Soti nan jeng Oyapòk-la rive pi ho lonè yon moun ka resevwa: pou kouraj-li, yo dékoré’y épi Croix de Guerre épi palmis, Médaille Militaire, épi <a href="https://www.legiondhonneur.fr/en">Légion d’Honneur</a> – menm jan kon konpatriyòt-li Félix Éboué. Apré sa i tounen lakay, i lévé yon fanmi, épi i dirijé prizon Kayèn. Kat générasyon. Yon vil. Yon non.</p>
-    <p class="lede de">Dornville Mandé, 1885 in <a href="https://de.wikipedia.org/wiki/Oyapock">Oyapock</a> geboren, war Zouave in der <a href="https://de.wikipedia.org/wiki/Schlacht_um_Verdun">Schlacht von Verdun</a> – dem grausamsten Stellungskrieg des Ersten Weltkriegs, in dem die Soldaten monatelang im Schlamm und unter schwerem Artilleriefeuer harrten. Trotz erfrorener Füße ließ er seine Einheit bis zur Befreiung nicht im Stich. Vom Dschungel am Oyapock bis zu den höchsten Auszeichnungen, die man erhalten kann: Für seinen außergewöhnlichen Mut wurde er mit der Croix de Guerre mit Palme, der Médaille Militaire und der <a href="https://www.legiondhonneur.fr/en">Légion d’Honneur</a> geehrt – genau wie sein Landsmann Félix Éboué. Danach kehrte er heim, zog eine Familie groß und leitete das Gefängnis in Cayenne. Vier Generationen. Eine Stadt. Ein Name.</p>
+    <p class="lede en">Dornville Mandé, born in <a href="https://en.wikipedia.org/wiki/Oyapock" target="_blank" rel="noopener">Oyapock</a> in 1885, was a Zouave at the <a href="https://en.wikipedia.org/wiki/Battle_of_Verdun" target="_blank" rel="noopener">Battle of Verdun</a> – the most brutal trench warfare of the First World War, where soldiers endured months of mud and heavy artillery fire. Despite his frozen feet, he did not abandon his unit until the liberation. From the jungle of the Oyapock to the highest honors one can receive: for his extraordinary bravery, he was awarded the Croix de Guerre with palm, the Médaille Militaire, and the <a href="https://www.legiondhonneur.fr/en" target="_blank" rel="noopener">Légion d’Honneur</a> – just like his compatriot Félix Éboué. Afterwards, he returned home, raised a family, and managed the prison in Cayenne. Four generations. One city. One name.</p>
+    <p class="lede fr">Dornville Mandé, né à <a href="https://fr.wikipedia.org/wiki/Oyapock" target="_blank" rel="noopener">Oyapock</a> en 1885, fut zouave à la <a href="https://fr.wikipedia.org/wiki/Bataille_de_Verdun" target="_blank" rel="noopener">bataille de Verdun</a> – la plus cruelle de la Première Guerre mondiale, où les soldats endurèrent des mois de boue et de bombardements intenses. Malgré ses pieds gelés, il ne lâcha pas son unité jusqu’à la libération. De la jungle de l’Oyapock aux plus hautes distinctions qu’un homme puisse recevoir : pour son courage exceptionnel, il fut décoré de la Croix de Guerre avec palme, de la Médaille militaire et de la <a href="https://www.legiondhonneur.fr/fr" target="_blank" rel="noopener">Légion d’honneur</a> – tout comme son compatriote Félix Éboué. Par la suite, il rentra chez lui, éleva une famille et dirigea la prison de Cayenne. Quatre générations. Une ville. Un nom.</p>
+    <p class="lede kr">Dornville Mandé, fèt an <a href="https://en.wikipedia.org/wiki/Oyapock" target="_blank" rel="noopener">Oyapòk</a> an 1885, té yon zouav an <a href="https://en.wikipedia.org/wiki/Battle_of_Verdun" target="_blank" rel="noopener">batay Vèrdin</a> – pi gwo lagè tranché Premyé Lagè Mondyal-la, kote sòlda-yo té rété mwa an labou anba gwo difé kanon. Menm si pyé-li té fwèt, i pa kite inité-li jis tan libérasyon-an. Soti nan jeng Oyapòk-la rive pi ho lonè yon moun ka resevwa: pou kouraj-li, yo dékoré’y épi Croix de Guerre épi palmis, Médaille Militaire, épi <a href="https://www.legiondhonneur.fr/en" target="_blank" rel="noopener">Légion d’Honneur</a> – menm jan kon konpatriyòt-li Félix Éboué. Apré sa i tounen lakay, i lévé yon fanmi, épi i dirijé prizon Kayèn. Kat générasyon. Yon vil. Yon non.</p>
+    <p class="lede de">Dornville Mandé, 1885 in <a href="https://de.wikipedia.org/wiki/Oyapock" target="_blank" rel="noopener">Oyapock</a> geboren, war Zouave in der <a href="https://de.wikipedia.org/wiki/Schlacht_um_Verdun" target="_blank" rel="noopener">Schlacht von Verdun</a> – dem grausamsten Stellungskrieg des Ersten Weltkriegs, in dem die Soldaten monatelang im Schlamm und unter schwerem Artilleriefeuer harrten. Trotz erfrorener Füße ließ er seine Einheit bis zur Befreiung nicht im Stich. Vom Dschungel am Oyapock bis zu den höchsten Auszeichnungen, die man erhalten kann: Für seinen außergewöhnlichen Mut wurde er mit der Croix de Guerre mit Palme, der Médaille Militaire und der <a href="https://www.legiondhonneur.fr/en" target="_blank" rel="noopener">Légion d’Honneur</a> geehrt – genau wie sein Landsmann Félix Éboué. Danach kehrte er heim, zog eine Familie groß und leitete das Gefängnis in Cayenne. Vier Generationen. Eine Stadt. Ein Name.</p>
     <p class="byline en">Made by <a href="https://nagacodex.cloud">Maurice Holda</a>, in honour of his great-grandfather.</p>
     <p class="byline fr">Faite par <a href="https://nagacodex.cloud">Maurice Holda</a>, en l’honneur de son arrière-grand-père.</p>
     <p class="byline kr"><a href="https://nagacodex.cloud">Maurice Holda</a> fè paj tala, an lonè gran granpapa-li.</p>
@@ -993,9 +1043,9 @@
 
 <section class="ledger" aria-label="Five marks of the life" data-label-en="Five marks of the life" data-label-fr="Cinq repères de la vie" data-label-kr="Senk mak lavi-a" data-label-de="Fünf Marken des Lebens">
   <ol>
-    <li><span>1885</span><strong><a href="https://en.wikipedia.org/wiki/Oyapock">Oyapock</a></strong></li>
+    <li><span>1885</span><strong><a href="https://en.wikipedia.org/wiki/Oyapock" target="_blank" rel="noopener">Oyapock</a></strong></li>
     <li><span>1915</span><strong>Zouave</strong></li>
-    <li><span><span class="en">Dec 1916</span><span class="fr">Déc. 1916</span><span class="kr">Dés. 1916</span><span class="de">Dez. 1916</span></span><strong><a href="https://en.wikipedia.org/wiki/Battle_of_Verdun">Verdun</a></strong></li>
+    <li><span><span class="en">Dec 1916</span><span class="fr">Déc. 1916</span><span class="kr">Dés. 1916</span><span class="de">Dez. 1916</span></span><strong><a href="https://en.wikipedia.org/wiki/Battle_of_Verdun" target="_blank" rel="noopener">Verdun</a></strong></li>
     <li><span><span class="en">Cited</span><span class="fr">Cité</span><span class="kr">Sité</span><span class="de">Belobt</span></span><strong><span class="en">Three honours</span><span class="fr">Trois décorations</span><span class="kr">Twa lonè</span><span class="de">Drei Ehren</span></strong></li>
     <li><span>1941</span><strong>Cayenne</strong></li>
   </ol>
@@ -1090,7 +1140,7 @@
   </section>
 
   <section class="chapter" id="the-war">
-    <h2><i>02</i> <a href="https://en.wikipedia.org/wiki/Battle_of_Verdun">Verdun</a></h2>
+    <h2><i>02</i> <a href="https://en.wikipedia.org/wiki/Battle_of_Verdun" target="_blank" rel="noopener">Verdun</a></h2>
     <p class="en">He was conscripted with the class of 1905. The register documents his enlistment in the Compagnie d’Infanterie Coloniale de la Guyane and his transfer to a regiment of Zouaves. The date written for that transition is October 1, 1915. He was thirty years old—a man from the equator sent into a European winter.</p>
     <p class="fr">Il est appelé avec la classe de 1905. Le registre note son incorporation dans la compagnie d’infanterie coloniale de la Guyane, puis son passage dans un régiment de zouaves. La date indiquée pour ce passage est le 1<sup>er</sup> octobre 1915. Il a trente ans. Un homme de l’équateur, envoyé dans un hiver d’Europe.</p>
     <p class="kr">Yo kriyé’y an klas 1905. Rejis-la ka di yo mété’y an konpagni enfanteri kolonyal Giyàn, épi apré yo pasé’y an yon rejiman zouav. Dat-la yo ékri pou pasaj tala sé 1e òktòb 1915. I té ni trant lanné. Yon nonm ki soti anba lékwatè, yo voyé’y an yon livè Léwòp.</p>
@@ -1099,10 +1149,10 @@
     <p class="fr">Avant d’être envoyé à Verdun, il aurait passé environ six ans en Martinique pour suivre sa formation. C’est pour cette raison qu’il avait un régiment et qu’il n’était pas seulement un soldat : il commandait une unité, et c’est de cette unité qu’il a été envoyé à Verdun.</p>
     <p class="kr">Avan yo anbarké’y pou Vèrdin, souvni fanmi-an di i té alé Matinik pou fè Ausbildung-li, fòmasyon-li, épi i rété la anviron si lanné. I té ni yon rejiman pas i té ka kòmandé yon inité. Sé an inité tala yo voyé’y Vèrdin.</p>
     <p class="de">Bevor man ihn nach Verdun verschiffte, so die Familienerinnerung, war er nach Martinique gegangen, um seine Ausbildung zu machen, und er blieb dort etwa sechs Jahre. Er hatte ein Regiment, weil er eine Einheit führte. Aus dieser Einheit schickte man ihn nach Verdun.</p>
-    <p class="en">The <a href="https://en.wikipedia.org/wiki/Battle_of_Verdun">Battle of Verdun</a> began on February 21, 1916. By December, the French were retaking ground. From December 15, in severe cold, the final French offensive of the battle retook Louvemont, Bezonvaux, and Côte du Poivre. His citation does not name a trench. Instead, it names the days and the location: <em>sous Verdun</em> from December 15 to 20, 1916.</p>
-    <p class="fr">La <a href="https://fr.wikipedia.org/wiki/Bataille_de_Verdun">bataille de Verdun</a> débute le 21 février 1916. En décembre, les Français reprennent du terrain. À partir du 15 décembre, dans un froid glacial, la dernière offensive française de cette bataille permet de reprendre Louvemont, Bezonvaux et la Côte du Poivre. Sa citation ne mentionne pas une tranchée. Elle mentionne les jours et le lieu en un seul mot : « sous Verdun, du 15 au 20 décembre 1916 ».</p>
-    <p class="kr"><a href="https://en.wikipedia.org/wiki/Battle_of_Verdun">Konba Vèrdin</a>-an ouvè 21 fevryé 1916. An désanm, Franse té ka reprann tè. A pati 15 désanm, an yon frèt ki rèd, dènye atak franse-a an konba tala reprann Louvemont, Bezonvaux épi Côte du Poivre. Sitasyon-an pa bay non pyès tranché. I bay jou-a, épi kote-a an yon sèl mo : <em>anba Vèrdin</em>, di 15 rive 20 désanm 1916.</p>
-    <p class="de">Die <a href="https://de.wikipedia.org/wiki/Schlacht_um_Verdun">Schlacht von Verdun</a> hatte am 21. Februar 1916 begonnen. Im Dezember holten die Franzosen Gelände zurück. Ab dem 15. Dezember, in strenger Kälte, nahm die letzte französische Offensive dieser Schlacht Louvemont, Bezonvaux und die Côte du Poivre wieder ein. Seine Citation nennt keinen Graben. Sie nennt die Tage und den Ort in einem Wort: <em>sous Verdun</em>, vom 15. bis zum 20. Dezember 1916.</p>
+    <p class="en">The <a href="https://en.wikipedia.org/wiki/Battle_of_Verdun" target="_blank" rel="noopener">Battle of Verdun</a> began on February 21, 1916. By December, the French were retaking ground. From December 15, in severe cold, the final French offensive of the battle retook Louvemont, Bezonvaux, and Côte du Poivre. His citation does not name a trench. Instead, it names the days and the location: <em>sous Verdun</em> from December 15 to 20, 1916.</p>
+    <p class="fr">La <a href="https://fr.wikipedia.org/wiki/Bataille_de_Verdun" target="_blank" rel="noopener">bataille de Verdun</a> débute le 21 février 1916. En décembre, les Français reprennent du terrain. À partir du 15 décembre, dans un froid glacial, la dernière offensive française de cette bataille permet de reprendre Louvemont, Bezonvaux et la Côte du Poivre. Sa citation ne mentionne pas une tranchée. Elle mentionne les jours et le lieu en un seul mot : « sous Verdun, du 15 au 20 décembre 1916 ».</p>
+    <p class="kr"><a href="https://en.wikipedia.org/wiki/Battle_of_Verdun" target="_blank" rel="noopener">Konba Vèrdin</a>-an ouvè 21 fevryé 1916. An désanm, Franse té ka reprann tè. A pati 15 désanm, an yon frèt ki rèd, dènye atak franse-a an konba tala reprann Louvemont, Bezonvaux épi Côte du Poivre. Sitasyon-an pa bay non pyès tranché. I bay jou-a, épi kote-a an yon sèl mo : <em>anba Vèrdin</em>, di 15 rive 20 désanm 1916.</p>
+    <p class="de">Die <a href="https://de.wikipedia.org/wiki/Schlacht_um_Verdun" target="_blank" rel="noopener">Schlacht von Verdun</a> hatte am 21. Februar 1916 begonnen. Im Dezember holten die Franzosen Gelände zurück. Ab dem 15. Dezember, in strenger Kälte, nahm die letzte französische Offensive dieser Schlacht Louvemont, Bezonvaux und die Côte du Poivre wieder ein. Seine Citation nennt keinen Graben. Sie nennt die Tage und den Ort in einem Wort: <em>sous Verdun</em>, vom 15. bis zum 20. Dezember 1916.</p>
     <p class="en">His feet were already frozen. He remained there until his unit was relieved and only then allowed them to carry him out. According to the Livre d’Or of 1924, both feet were amputated. The register notes the loss of the last four fingers on his left hand and his return to Cayenne in 1918. The top of the form is marked “réformé.” The war was over for him long before the armistice.</p>
     <p class="fr">Ses pieds sont déjà gelés. Il reste jusqu’à la relève de l’unité, et alors seulement il se laisse emporter. Le Livre d’Or de 1924 indique que les deux pieds ont été amputés. Le registre ajoute la perte des quatre derniers doigts de la main gauche et son retour à Cayenne en 1918. Le haut de la fiche porte « réformé ». Pour lui, la guerre est finie bien avant l’armistice.</p>
     <p class="kr">Pyé-li té ja fwèt. I rété jouk relèv-la. Sé lè sa i kite yo chayé’y. Liv dò 1924 di yo koupé tou dé pyé-li. Rejis-la ajouté i pèdi kat dènye dwèt men gòch-li, épi i tounen Kayèn an 1918. An tèt fèy-la yo maké <em>réformé</em>. Pou li, lagè-a té fini lontan avan armistis-la.</p>
@@ -1173,14 +1223,14 @@
         <span class="en">The Médaille militaire is the highest decoration France gives to a non-commissioned soldier. It comes just after the Legion of Honor.</span>
         <span class="fr">La plus haute décoration que la France attribue à un soldat qui n’est pas officier. Elle vient juste après la Légion d’honneur.</span>
         <span class="kr">Pi ho dékorasyon Lafrans ka bay yon sòlda ki pa ofisyé. I vini touswit apré Légion d’honneur.</span>
-        <span class="de">Die höchste Auszeichnung, die Frankreich einem Soldaten gibt, der kein Offizier ist. Sie steht unmittelbar nach der <a href="https://www.legiondhonneur.fr/en">Légion d’honneur</a>.</span>
+        <span class="de">Die höchste Auszeichnung, die Frankreich einem Soldaten gibt, der kein Offizier ist. Sie steht unmittelbar nach der <a href="https://www.legiondhonneur.fr/en" target="_blank" rel="noopener">Légion d’honneur</a>.</span>
       </li>
       <li>
-        <strong><a href="https://www.legiondhonneur.fr/en">Légion d’honneur</a></strong>
-        <span class="en">The <a href="https://www.legiondhonneur.fr/en">Légion d’Honneur</a> is the order Napoleon founded in 1802. The Livre d’Or prints the cross beside his name.</span>
-        <span class="fr"><a href="https://www.legiondhonneur.fr/fr">L’ordre</a> fondé par Napoléon en 1802. Le Livre d’Or imprime la croix à côté du nom du récipiendaire.</span>
-        <span class="kr"><a href="https://www.legiondhonneur.fr/en">Lòd</a> Napoléon té fondé an 1802. Liv dò-a ka enprimé kwa-a bò non-li.</span>
-        <span class="de">Der <a href="https://www.legiondhonneur.fr/en">Orden</a>, den Napoleon 1802 gründete. Im Livre d’Or steht das Kreuz neben seinem Namen.</span>
+        <strong><a href="https://www.legiondhonneur.fr/en" target="_blank" rel="noopener">Légion d’honneur</a></strong>
+        <span class="en">The <a href="https://www.legiondhonneur.fr/en" target="_blank" rel="noopener">Légion d’Honneur</a> is the order Napoleon founded in 1802. The Livre d’Or prints the cross beside his name.</span>
+        <span class="fr"><a href="https://www.legiondhonneur.fr/fr" target="_blank" rel="noopener">L’ordre</a> fondé par Napoléon en 1802. Le Livre d’Or imprime la croix à côté du nom du récipiendaire.</span>
+        <span class="kr"><a href="https://www.legiondhonneur.fr/en" target="_blank" rel="noopener">Lòd</a> Napoléon té fondé an 1802. Liv dò-a ka enprimé kwa-a bò non-li.</span>
+        <span class="de">Der <a href="https://www.legiondhonneur.fr/en" target="_blank" rel="noopener">Orden</a>, den Napoleon 1802 gründete. Im Livre d’Or steht das Kreuz neben seinem Namen.</span>
       </li>
     </ul>
     <figure class="medal">
@@ -1227,7 +1277,7 @@
     <p class="en">They received the same medal, the Légion d’honneur. Éboué did not fight with a rifle. He was a governor, and from Chad he raised African soldiers for the Allied armies. This card names him Governor General, first résistant of the empire, Officier of the Légion d’honneur, and holder of the Croix de la Libération. He died in 1944. In 1949 he was the first Black man received into the Panthéon.</p>
     <p class="fr">Ils ont reçu la même médaille, la Légion d’honneur. Éboué n’a pas combattu le fusil à la main. Il était gouverneur, et depuis le Tchad il a levé des soldats africains pour les armées alliées. La carte le nomme gouverneur général, premier résistant de l’empire, officier de la Légion d’honneur, et titulaire de la Croix de la Libération. Il meurt en 1944. En 1949, il est le premier homme noir reçu au Panthéon.</p>
     <p class="kr">Yo resevwa menm méday-la, Légion d’honneur. Éboué pa goumen épi yon fizi. I té gouvènè, épi soti Tchad i lévé sòlda afriken pou lamé alye-a. Kat-la ka kriyé’y gouvènè jénéral, premyé résistant anpi-a, ofisyé Légion d’honneur, épi i ni Croix de la Libération. I mò an 1944. An 1949 i sé premyé nonm nwè yo resevwa an Panthéon.</p>
-    <p class="de">Sie erhielten dieselbe Medaille, die <a href="https://www.legiondhonneur.fr/en">Légion d’honneur</a>. Éboué kämpfte nicht mit dem Gewehr. Er war Gouverneur, und vom Tschad aus stellte er afrikanische Soldaten für die alliierten Armeen auf. Die Karte nennt ihn Generalgouverneur, ersten Résistant des Empire, Officier der Légion d’honneur und Träger der Croix de la Libération. Er starb 1944. 1949 wurde er als erster schwarzer Mann in das Panthéon aufgenommen.</p>
+    <p class="de">Sie erhielten dieselbe Medaille, die <a href="https://www.legiondhonneur.fr/en" target="_blank" rel="noopener">Légion d’honneur</a>. Éboué kämpfte nicht mit dem Gewehr. Er war Gouverneur, und vom Tschad aus stellte er afrikanische Soldaten für die alliierten Armeen auf. Die Karte nennt ihn Generalgouverneur, ersten Résistant des Empire, Officier der Légion d’honneur und Träger der Croix de la Libération. Er starb 1944. 1949 wurde er als erster schwarzer Mann in das Panthéon aufgenommen.</p>
     <figure class="card">
       <img src="images/eboue-card.jpg" alt="Card for Governor General Félix Éboué, 1884–1944, Officier of the Légion d’honneur." loading="lazy" width="386" height="518"
         data-alt-en="Card for Governor General Félix Éboué, 1884–1944. It names him Officier of the Légion d’honneur and holder of the Croix de la Libération. Not Dornville."
@@ -1237,7 +1287,7 @@
       <figcaption class="en">The card for Governor General Félix Éboué, 1884–1944. It names him Officier of the Légion d’honneur. Dornville received the same order. Not a photograph of Dornville.</figcaption>
       <figcaption class="fr">La carte du gouverneur général Félix Éboué, 1884–1944. Elle le nomme officier de la Légion d’honneur. Dornville a reçu le même ordre. Ce n’est pas une photographie de Dornville.</figcaption>
       <figcaption class="kr">Kat gouvènè jénéral Félix Éboué, 1884–1944. I ka nonmen’y ofisyé Légion d’honneur. Dornville resevwa menm lòd-la. Sé pa yon foto Dornville.</figcaption>
-      <figcaption class="de">Die Karte für Generalgouverneur Félix Éboué, 1884–1944. Sie nennt ihn Officier der <a href="https://www.legiondhonneur.fr/en">Légion d’honneur</a>. Dornville erhielt denselben Orden. Keine Fotografie von Dornville.</figcaption>
+      <figcaption class="de">Die Karte für Generalgouverneur Félix Éboué, 1884–1944. Sie nennt ihn Officier der <a href="https://www.legiondhonneur.fr/en" target="_blank" rel="noopener">Légion d’honneur</a>. Dornville erhielt denselben Orden. Keine Fotografie von Dornville.</figcaption>
     </figure>
     <figure class="portrait">
       <img src="images/eboue-de-gaulle.jpg" alt="Félix Éboué welcoming Charles de Gaulle to French Chad in October 1940." loading="lazy" width="826" height="1024"
@@ -1265,10 +1315,10 @@
 
   <section class="chapter" id="the-river">
     <h2><i>06</i> <span class="en">The river</span><span class="fr">Le fleuve</span><span class="kr">Larivyè-a</span><span class="de">Der Fluss</span></h2>
-    <p class="en">The river <a href="https://en.wikipedia.org/wiki/Oyapock">Oyapock</a> in 1885 was not a French town surrounded by jungle. It was a confluence of three cultures that had been living together for two centuries: African, Indigenous, and European. On the map, the river is the border. On the ground, however, it was a road. The Kali’na live on the French bank, and the Galibi do Oiapoque live on the Brazilian bank. They are the same people. Upriver, the Wayãpi and the Teko live across the line that Europe drew in the headwaters.</p>
-    <p class="fr"><a href="https://fr.wikipedia.org/wiki/Oyapock">L’Oyapock</a> de 1885 n’est pas une ville française entourée de forêt. C’est la rencontre de trois mondes qui vivaient déjà ensemble depuis deux siècles : africain, amérindien et européen. Le fleuve est la frontière sur la carte. Sur le sol, c’était une route. Les Kali’na de la rive française et les Galibi do Oiapoque de la rive brésilienne sont le même peuple. En amont, les Wayãpi et les Teko vivent de part et d’autre de la ligne que l’Europe a tracée dans les sources.</p>
-    <p class="kr"><a href="https://en.wikipedia.org/wiki/Oyapock">Oyapòk</a> an 1885 pa té yon lavil franse épi bwa tout otou. Sé té rankont twa lemonn ki té ja ka viv ansanm depi dé syèk : Lafrik, moun péyi-a, épi Léwòp. Rivyè-a sé fwontyè-a asou kat-la. Asou tè-a, i té yon chimen. Kali’na bò franse-a épi Galibi do Oiapoque bò Brézil-la sé menm pèp-la. An ho rivyè-a, Wayãpi épi Teko ka viv chak bò liy Léwòp té trase an tèt dlo-a.</p>
-    <p class="de"><a href="https://de.wikipedia.org/wiki/Oyapock">Oyapock</a> im Jahr 1885 war noch keine französische Stadt, umgeben von Dschungel. Es war die Begegnung dreier Kulturen, die bereits seit zwei Jahrhunderten zusammenlebten: afrikanisch, indigen und europäisch. Der Fluss bildet auf der Karte die Grenze. Die Kali’na am französischen Ufer und die Galibi do Oiapoque am brasilianischen Ufer sind dasselbe Volk. Flussaufwärts leben die Wayapi und die Teko zu beiden Seiten der Linie, die Europa in den Quellgebieten zog.</p>
+    <p class="en">The river <a href="https://en.wikipedia.org/wiki/Oyapock" target="_blank" rel="noopener">Oyapock</a> in 1885 was not a French town surrounded by jungle. It was a confluence of three cultures that had been living together for two centuries: African, Indigenous, and European. On the map, the river is the border. On the ground, however, it was a road. The Kali’na live on the French bank, and the Galibi do Oiapoque live on the Brazilian bank. They are the same people. Upriver, the Wayãpi and the Teko live across the line that Europe drew in the headwaters.</p>
+    <p class="fr"><a href="https://fr.wikipedia.org/wiki/Oyapock" target="_blank" rel="noopener">L’Oyapock</a> de 1885 n’est pas une ville française entourée de forêt. C’est la rencontre de trois mondes qui vivaient déjà ensemble depuis deux siècles : africain, amérindien et européen. Le fleuve est la frontière sur la carte. Sur le sol, c’était une route. Les Kali’na de la rive française et les Galibi do Oiapoque de la rive brésilienne sont le même peuple. En amont, les Wayãpi et les Teko vivent de part et d’autre de la ligne que l’Europe a tracée dans les sources.</p>
+    <p class="kr"><a href="https://en.wikipedia.org/wiki/Oyapock" target="_blank" rel="noopener">Oyapòk</a> an 1885 pa té yon lavil franse épi bwa tout otou. Sé té rankont twa lemonn ki té ja ka viv ansanm depi dé syèk : Lafrik, moun péyi-a, épi Léwòp. Rivyè-a sé fwontyè-a asou kat-la. Asou tè-a, i té yon chimen. Kali’na bò franse-a épi Galibi do Oiapoque bò Brézil-la sé menm pèp-la. An ho rivyè-a, Wayãpi épi Teko ka viv chak bò liy Léwòp té trase an tèt dlo-a.</p>
+    <p class="de"><a href="https://de.wikipedia.org/wiki/Oyapock" target="_blank" rel="noopener">Oyapock</a> im Jahr 1885 war noch keine französische Stadt, umgeben von Dschungel. Es war die Begegnung dreier Kulturen, die bereits seit zwei Jahrhunderten zusammenlebten: afrikanisch, indigen und europäisch. Der Fluss bildet auf der Karte die Grenze. Die Kali’na am französischen Ufer und die Galibi do Oiapoque am brasilianischen Ufer sind dasselbe Volk. Flussaufwärts leben die Wayapi und die Teko zu beiden Seiten der Linie, die Europa in den Quellgebieten zog.</p>
     <p class="en">The families who escaped the Dutch plantations in Suriname influenced this country as much as the colonial administration did. The Aluku, Maroons from the Cottica, were driven up the Maroni River. In 1815, they formed an alliance with the Wayana, sharing villages, intermarrying, and agreeing to defend each other. In July 1841, a delegation of twelve Aluku, including the granman Gongo, went to the French governor to request permission to settle on the Oyapock. Eleven were killed by French soldiers. The rest stayed on the Lawa. That was forty-four years before Dornville was born. It belongs to the valley he was born into, not to his service. The border on the map never kept the people on the two banks apart.</p>
     <p class="fr">Les familles ayant fui les plantations hollandaises du Suriname ont façonné ce pays autant que l’administration coloniale. Les Aluku, ou Marrons du Cottica, ont été poussés en amont du Maroni. En 1815, ils ont conclu un pacte de sang avec les Wayana : villages partagés, mariages, défense commune. En juillet 1841, une délégation de douze Aluku, dont le granman Gongo, se rend auprès du gouverneur français pour lui demander l’autorisation de s’établir sur l’Oyapock. Onze d’entre eux sont tués par des soldats français. Les autres sont restés sur la Lawa. C’était quarante-quatre ans avant la naissance de Dornville. Ce n’est pas un épisode de sa vie. C’est la vallée où il est né, une frontière qui n’a jamais retenu les gens qu’elle était censée séparer.</p>
     <p class="kr">Fanmi ki té chappé plantasyon Olandé Sirinam té fòme péyi tala otan ki administrasyon kolonyal-la. Aluku-a, Mawon ki soti Cottica, yo pouse yo monté Maroni-a. An 1815 yo fè yon pakt san épi Wayana-a : vilaj ansanm, mayé ansanm, defann kò yo ansanm. An jwiyè 1841, douz Aluku, épi granman Gongo an mitan yo, alé mandé gouvènè franse-a pèmisyon pou rété asou Oyapòk. Onz mò anba sòlda franse. Rès-la rété asou Lawa. Sa té karant-kat lanné avan Dornville fèt. Sa sé fon-an koté i fèt, sé pa sèvis-li. Fwontyè kat-la pa janmen séparè moun dé bò-a.</p>
@@ -2140,7 +2190,7 @@
     <p class="en">These are the facts, for anyone looking up a man of Guyane, of the French Antilles, of Paris and the Seine, or of the Légion d’honneur. Nothing is added beyond the register and the family record.</p>
     <p class="fr">Voici les faits, pour qui cherche un homme de Guyane, des Antilles françaises, de Paris et de la Seine, ou de la Légion d’honneur. Rien n’est ajouté au-delà du registre et du souvenir de la famille.</p>
     <p class="kr">Sé bagay tala, pou moun ki ka chèche yon nonm Giyàn, Lézantiy franse-a, Pari épi Seine, oben Légion d’honneur. Pyès bagay pa ajouté anlè rejis-la épi souvni fanmi-an.</p>
-    <p class="de">Dies sind die Tatsachen, für jeden, der einen Mann aus Guyane sucht, von den französischen Antillen, aus Paris und der Seine, oder von der <a href="https://www.legiondhonneur.fr/en">Légion d’honneur</a>. Nichts steht hier über das Register und die Familienerinnerung hinaus.</p>
+    <p class="de">Dies sind die Tatsachen, für jeden, der einen Mann aus Guyane sucht, von den französischen Antillen, aus Paris und der Seine, oder von der <a href="https://www.legiondhonneur.fr/en" target="_blank" rel="noopener">Légion d’honneur</a>. Nichts steht hier über das Register und die Familienerinnerung hinaus.</p>
     <ol class="reperes">
       <li>
         <h3><span class="en">Who was Dornville Jean-Louis Mandé?</span><span class="fr">Qui était Dornville Jean-Louis Mandé ?</span><span class="kr">Kimoun Dornville Jean-Louis Mandé yé ?</span><span class="de">Wer war Dornville Jean-Louis Mandé?</span></h3>
@@ -2179,10 +2229,10 @@
       </li>
       <li>
         <h3><span class="en">What has the President of the Republic to do with this page?</span><span class="fr">Quel rapport avec le président de la République ?</span><span class="kr">Ki rapò prézidan Lafrans ni épi paj tala ?</span><span class="de">Was hat der Präsident der Republik mit dieser Seite zu tun?</span></h3>
-        <p class="en">The President of the Republic is Grand Master of the <a href="https://www.legiondhonneur.fr/en">Légion d’honneur</a>. The Livre d’Or of 1924 prints the cross beside the name MANDÉ Dornéville. This page does not hold the decree. It holds the printed roll and the matricule, so that France, the army, and anyone searching the order can find the man from Oyapock.</p>
-        <p class="fr">Le président de la République est le grand maître de la <a href="https://www.legiondhonneur.fr/fr">Légion d’honneur</a>. Le Livre d’Or de 1924 mentionne la croix à côté du nom MANDÉ Dornéville. Cette page ne détient pas le décret. Elle contient le rôle imprimé et le registre matricule, afin que la France, l’armée et quiconque cherche l’ordre puisse trouver l’homme de l’Oyapock.</p>
-        <p class="kr">Prézidan Lafrans sé gran mèt <a href="https://www.legiondhonneur.fr/en">Légion d’honneur</a>. Liv dò 1924 ka enprimé kwa-a bò non MANDÉ Dornéville. Paj tala pa ni dékrè-a. I ni woulo enprimé-a épi rejis-la, pou Lafrans, lamé-a, épi moun ki ka chèche lòd-la, pé jwenn nonm Oyapòk-la.</p>
-        <p class="de">Der Präsident der Republik ist Großmeister der <a href="https://www.legiondhonneur.fr/en">Légion d’honneur</a>. Das Livre d’Or von 1924 druckt das Kreuz neben den Namen MANDÉ Dornéville. Diese Seite besitzt den Erlass nicht. Sie besitzt die gedruckte Liste und das Matrikelblatt, damit Frankreich, die Armee und wer den Orden sucht den Mann vom Oyapock finden kann.</p>
+        <p class="en">The President of the Republic is Grand Master of the <a href="https://www.legiondhonneur.fr/en" target="_blank" rel="noopener">Légion d’honneur</a>. The Livre d’Or of 1924 prints the cross beside the name MANDÉ Dornéville. This page does not hold the decree. It holds the printed roll and the matricule, so that France, the army, and anyone searching the order can find the man from Oyapock.</p>
+        <p class="fr">Le président de la République est le grand maître de la <a href="https://www.legiondhonneur.fr/fr" target="_blank" rel="noopener">Légion d’honneur</a>. Le Livre d’Or de 1924 mentionne la croix à côté du nom MANDÉ Dornéville. Cette page ne détient pas le décret. Elle contient le rôle imprimé et le registre matricule, afin que la France, l’armée et quiconque cherche l’ordre puisse trouver l’homme de l’Oyapock.</p>
+        <p class="kr">Prézidan Lafrans sé gran mèt <a href="https://www.legiondhonneur.fr/en" target="_blank" rel="noopener">Légion d’honneur</a>. Liv dò 1924 ka enprimé kwa-a bò non MANDÉ Dornéville. Paj tala pa ni dékrè-a. I ni woulo enprimé-a épi rejis-la, pou Lafrans, lamé-a, épi moun ki ka chèche lòd-la, pé jwenn nonm Oyapòk-la.</p>
+        <p class="de">Der Präsident der Republik ist Großmeister der <a href="https://www.legiondhonneur.fr/en" target="_blank" rel="noopener">Légion d’honneur</a>. Das Livre d’Or von 1924 druckt das Kreuz neben den Namen MANDÉ Dornéville. Diese Seite besitzt den Erlass nicht. Sie besitzt die gedruckte Liste und das Matrikelblatt, damit Frankreich, die Armee und wer den Orden sucht den Mann vom Oyapock finden kann.</p>
       </li>
     </ol>
   </section>
@@ -2250,8 +2300,23 @@
     <p class="kr">Mizajou 26 òktòb 2026. Paj tala, <a href="https://nagacodex.cloud">Maurice Holda</a> fè’y an lonè gran granpapa-li. I sé fanmi, générasyon ki vini apré li.</p>
     <p class="de">Aktualisiert am 26. Oktober 2026. Diese Seite wurde von <a href="https://nagacodex.cloud">Maurice Holda</a> zu Ehren seines Urgroßvaters gemacht. Er gehört zur Familie, die Generation nach ihm.</p>
     <p class="kr">Kréyòl tala ékri an fason lézantiy franse-a, pou moun Matinik épi Gwadloup pé li’y. Moun Giyàn ké konprann osi.</p>
+    <p class="en">Contact: <a href="mailto:chosenfewrecords@hotmail.com">chosenfewrecords@hotmail.com</a>. <a href="policy.html">Policy</a>.</p>
+    <p class="fr">Contact : <a href="mailto:chosenfewrecords@hotmail.com">chosenfewrecords@hotmail.com</a>. <a href="policy.html">Politique</a>.</p>
+    <p class="kr">Kontak : <a href="mailto:chosenfewrecords@hotmail.com">chosenfewrecords@hotmail.com</a>. <a href="policy.html">Politik</a>.</p>
+    <p class="de">Kontakt: <a href="mailto:chosenfewrecords@hotmail.com">chosenfewrecords@hotmail.com</a>. <a href="policy.html">Hinweis</a>.</p>
   </div>
 </footer>
+
+<div class="cookie" role="dialog" aria-label="Cookies" data-label-en="Cookies" data-label-fr="Cookies" data-label-kr="Cookies" data-label-de="Cookies">
+  <p class="en">This page does not use tracking cookies. It only remembers the language you choose, on this device.</p>
+  <p class="fr">Cette page n’utilise pas de cookies de suivi. Elle retient seulement la langue choisie, sur cet appareil.</p>
+  <p class="kr">Paj tala pa ka sèvi épi cookie pou swiv moun. I ka kenbé sèlman lang ou chwazi, asou aparèy tala.</p>
+  <p class="de">Diese Seite benutzt keine Tracking-Cookies. Sie merkt sich nur die gewählte Sprache, auf diesem Gerät.</p>
+  <div class="row">
+    <button type="button" id="cookie-ok"><span class="en">All right</span><span class="fr">D’accord</span><span class="kr">Dakò</span><span class="de">Einverstanden</span></button>
+    <a href="policy.html"><span class="en">Policy</span><span class="fr">Politique</span><span class="kr">Politik</span><span class="de">Hinweis</span></a>
+  </div>
+</div>
 
 <script>
   var COPY = {
@@ -2345,6 +2410,11 @@
     });
     try { localStorage.setItem("mande-lang", lang); } catch (e) {}
   }
+  var cookieOk = document.getElementById("cookie-ok");
+  if (cookieOk) cookieOk.addEventListener("click", function () {
+    try { localStorage.setItem("mande-cookie", "1"); } catch (e) {}
+    document.documentElement.classList.add("cookie-ok");
+  });
   document.querySelectorAll(".langs button").forEach(function (button) {
     button.addEventListener("click", function () {
       setLang(button.getAttribute("data-set"));

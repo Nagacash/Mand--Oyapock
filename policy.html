@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<title>Politique — Dornville Jean-Louis Mandé</title>
+<meta name="description" content="Cette page ne suit personne. Elle retient seulement la langue choisie. Contact : chosenfewrecords@hotmail.com.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://mand-oyapock.vercel.app/policy.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=Outfit:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<script>
+  try {
+    var q = new URLSearchParams(location.search).get("lang");
+    var savedLang = (q === "fr" || q === "kr" || q === "en" || q === "de") ? q : localStorage.getItem("mande-lang");
+    if (savedLang === "fr" || savedLang === "kr" || savedLang === "en" || savedLang === "de") {
+      document.documentElement.setAttribute("data-lang", savedLang);
+      document.documentElement.lang = savedLang === "kr" ? "gcf" : savedLang;
+    }
+    if (localStorage.getItem("mande-cookie") === "1") document.documentElement.classList.add("cookie-ok");
+  } catch (e) {}
+</script>
+<style>
+  :root {
+    --night: #081610;
+    --clay: #c6a36a;
+    --clay-deep: #8a5e2e;
+    --paper: #f3eee6;
+    --ink: #241910;
+    --ink-soft: #5c4c3e;
+  }
+  * { box-sizing: border-box; }
+  html[data-lang="en"] .fr, html[data-lang="en"] .kr, html[data-lang="en"] .de,
+  html[data-lang="fr"] .en, html[data-lang="fr"] .kr, html[data-lang="fr"] .de,
+  html[data-lang="kr"] .en, html[data-lang="kr"] .fr, html[data-lang="kr"] .de,
+  html[data-lang="de"] .en, html[data-lang="de"] .fr, html[data-lang="de"] .kr { display: none; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 1.12rem;
+    line-height: 1.55;
+  }
+  a { color: #1c5874; }
+  a:hover { color: var(--clay-deep); }
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 6vw;
+    background: var(--night);
+  }
+  .top a.back {
+    color: var(--clay);
+    font-family: Outfit, "Avenir Next", sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .langs { display: flex; gap: 0.2rem; }
+  .langs button {
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: var(--paper);
+    font-family: Outfit, "Avenir Next", sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.4rem 0.5rem;
+    cursor: pointer;
+  }
+  .langs button[aria-selected="true"] {
+    background: var(--paper);
+    color: var(--night);
+    border-radius: 999px;
+  }
+  main {
+    width: min(42rem, calc(100% - 12vw));
+    margin: 0 auto;
+    padding: 3.2rem 0 6rem;
+  }
+  h1 {
+    font-family: Fraunces, Georgia, serif;
+    font-weight: 560;
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    margin: 0 0 1.2rem;
+  }
+  p { margin: 0 0 1rem; }
+  html:not(.cookie-ok) main { padding-bottom: 10rem; }
+  .cookie {
+    position: fixed;
+    z-index: 40;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.85rem 1.4rem;
+    padding: 0.85rem 6vw;
+    background: var(--night);
+    color: var(--paper);
+    border-top: 1px solid rgba(198, 163, 106, 0.45);
+  }
+  html.cookie-ok .cookie { display: none; }
+  .cookie p {
+    margin: 0;
+    flex: 1 1 18rem;
+    font-family: Outfit, "Avenir Next", sans-serif;
+    font-size: 0.86rem;
+    line-height: 1.45;
+  }
+  .cookie .row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.85rem; }
+  .cookie button {
+    appearance: none;
+    border: 0;
+    background: var(--clay);
+    color: var(--night);
+    font-family: Outfit, "Avenir Next", sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.55rem 0.85rem;
+    cursor: pointer;
+  }
+  .cookie a { color: var(--clay); }
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="back" href="index.html"><span class="en">The memorial</span><span class="fr">Le mémorial</span><span class="kr">Paj-la</span><span class="de">Die Gedenkseite</span></a>
+  <div class="langs" role="tablist">
+    <button type="button" role="tab" data-set="en">English</button>
+    <button type="button" role="tab" data-set="fr" aria-selected="true">Français</button>
+    <button type="button" role="tab" data-set="kr">Kriyòl</button>
+    <button type="button" role="tab" data-set="de">Deutsch</button>
+  </div>
+</header>
+<main>
+  <h1><span class="en">Policy</span><span class="fr">Politique</span><span class="kr">Politik</span><span class="de">Hinweis</span></h1>
+  <p class="en">This page is a family memorial for Dornville Jean-Louis Mandé. Maurice Holda made it. Contact: <a href="mailto:chosenfewrecords@hotmail.com">chosenfewrecords@hotmail.com</a>.</p>
+  <p class="fr">Cette page est un mémorial de famille pour Dornville Jean-Louis Mandé. Maurice Holda l’a faite. Contact : <a href="mailto:chosenfewrecords@hotmail.com">chosenfewrecords@hotmail.com</a>.</p>
+  <p class="kr">Paj tala sé yon memwaryal fanmi pou Dornville Jean-Louis Mandé. Maurice Holda fè’y. Kontak : <a href="mailto:chosenfewrecords@hotmail.com">chosenfewrecords@hotmail.com</a>.</p>
+  <p class="de">Diese Seite ist ein Familiengedächtnis für Dornville Jean-Louis Mandé. Maurice Holda hat sie gemacht. Kontakt: <a href="mailto:chosenfewrecords@hotmail.com">chosenfewrecords@hotmail.com</a>.</p>
+
+  <p class="en">It does not use tracking cookies, advertising, or an account. It does not sell information. Nothing you read here is sent to a server.</p>
+  <p class="fr">Elle n’utilise pas de cookies de suivi, ni de publicité, ni de compte. Elle ne vend aucune information. Rien de ce que l’on lit ici n’est envoyé à un serveur.</p>
+  <p class="kr">I pa ka sèvi épi cookie pou swiv moun, ni piblisité, ni kont. I pa ka vann enfòmasyon. Anyen moun ka li la pa ka alé an yon sèvè.</p>
+  <p class="de">Sie benutzt keine Tracking-Cookies, keine Werbung und kein Konto. Sie verkauft keine Angaben. Nichts, was hier gelesen wird, geht an einen Server.</p>
+
+  <p class="en">The language you choose is kept in this browser only, so the memorial can open in the same language next time. The choice on the notice at the bottom of the page is kept the same way.</p>
+  <p class="fr">La langue choisie est gardée dans ce navigateur seulement, pour que le mémorial s’ouvre dans la même langue la fois d’après. Le choix sur l’avis en bas de page est gardé de la même façon.</p>
+  <p class="kr">Lang ou chwazi-a ka rété an navigatè tala sèlman, pou memwaryal-la ouvè an menm lang lè w tounen. Chwa-a asou avi anba paj-la ka rété menm jan-an.</p>
+  <p class="de">Die gewählte Sprache bleibt nur in diesem Browser, damit die Gedenkseite beim nächsten Mal in derselben Sprache aufgeht. Die Wahl auf dem Hinweis unten auf der Seite bleibt auf dieselbe Weise.</p>
+
+  <p class="en">Links to Wikipedia, the Légion d’honneur, and <a href="https://nagacodex.cloud" target="_blank" rel="noopener">nagacodex.cloud</a> open in a new tab. Those sites have their own rules.</p>
+  <p class="fr">Les liens vers Wikipédia, la Légion d’honneur et <a href="https://nagacodex.cloud" target="_blank" rel="noopener">nagacodex.cloud</a> s’ouvrent dans un nouvel onglet. Ces sites ont leurs propres règles.</p>
+  <p class="kr">Lyen Wikipedya, Légion d’honneur, épi <a href="https://nagacodex.cloud" target="_blank" rel="noopener">nagacodex.cloud</a> ka ouvè an yon nouvo tab. Sit tala ni règ pa yo.</p>
+  <p class="de">Links zu Wikipedia, zur Légion d’honneur und zu <a href="https://nagacodex.cloud" target="_blank" rel="noopener">nagacodex.cloud</a> öffnen sich in einem neuen Tab. Diese Seiten haben ihre eigenen Regeln.</p>
+</main>
+<div class="cookie" role="dialog" aria-label="Cookies">
+  <p class="en">This page does not use tracking cookies. It only remembers the language you choose, on this device.</p>
+  <p class="fr">Cette page n’utilise pas de cookies de suivi. Elle retient seulement la langue choisie, sur cet appareil.</p>
+  <p class="kr">Paj tala pa ka sèvi épi cookie pou swiv moun. I ka kenbé sèlman lang ou chwazi, asou aparèy tala.</p>
+  <p class="de">Diese Seite benutzt keine Tracking-Cookies. Sie merkt sich nur die gewählte Sprache, auf diesem Gerät.</p>
+  <div class="row">
+    <button type="button" id="cookie-ok"><span class="en">All right</span><span class="fr">D’accord</span><span class="kr">Dakò</span><span class="de">Einverstanden</span></button>
+    <a href="policy.html"><span class="en">Policy</span><span class="fr">Politique</span><span class="kr">Politik</span><span class="de">Hinweis</span></a>
+  </div>
+</div>
+<script>
+  function setLang(lang) {
+    if (lang !== "en" && lang !== "fr" && lang !== "kr" && lang !== "de") lang = "fr";
+    document.documentElement.setAttribute("data-lang", lang);
+    document.documentElement.lang = lang === "kr" ? "gcf" : lang;
+    document.title = ({
+      en: "Policy — Dornville Jean-Louis Mandé",
+      fr: "Politique — Dornville Jean-Louis Mandé",
+      kr: "Politik — Dornville Jean-Louis Mandé",
+      de: "Hinweis — Dornville Jean-Louis Mandé"
+    })[lang];
+    document.querySelectorAll(".langs button").forEach(function (button) {
+      button.setAttribute("aria-selected", button.getAttribute("data-set") === lang ? "true" : "false");
+    });
+    try { localStorage.setItem("mande-lang", lang); } catch (e) {}
+  }
+  document.querySelectorAll(".langs button").forEach(function (button) {
+    button.addEventListener("click", function () { setLang(button.getAttribute("data-set")); });
+  });
+  setLang(document.documentElement.getAttribute("data-lang") || "fr");
+  var cookieOk = document.getElementById("cookie-ok");
+  if (cookieOk) cookieOk.addEventListener("click", function () {
+    try { localStorage.setItem("mande-cookie", "1"); } catch (e) {}
+    document.documentElement.classList.add("cookie-ok");
+  });
+</script>
+</body>
+</html>
