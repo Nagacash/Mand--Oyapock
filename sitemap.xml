@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://mand-oyapock.vercel.app/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mand-oyapock.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mand-oyapock.vercel.app/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mand-oyapock.vercel.app/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="gcf" href="https://mand-oyapock.vercel.app/?lang=kr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mand-oyapock.vercel.app/"/>
+  </url>
+  <url>
+    <loc>https://mand-oyapock.vercel.app/?lang=en</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mand-oyapock.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mand-oyapock.vercel.app/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mand-oyapock.vercel.app/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="gcf" href="https://mand-oyapock.vercel.app/?lang=kr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mand-oyapock.vercel.app/"/>
+  </url>
+  <url>
+    <loc>https://mand-oyapock.vercel.app/?lang=de</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mand-oyapock.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mand-oyapock.vercel.app/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mand-oyapock.vercel.app/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="gcf" href="https://mand-oyapock.vercel.app/?lang=kr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mand-oyapock.vercel.app/"/>
+  </url>
+  <url>
+    <loc>https://mand-oyapock.vercel.app/?lang=kr</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mand-oyapock.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mand-oyapock.vercel.app/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mand-oyapock.vercel.app/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="gcf" href="https://mand-oyapock.vercel.app/?lang=kr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mand-oyapock.vercel.app/"/>
+  </url>
+</urlset>

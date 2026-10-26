@@ -1,0 +1,33 @@
+# Dornville Jean-Louis Mandé
+
+> Family and archival memorial for Dornville Jean-Louis Mandé (19 September 1885 – 6 March 1950), born at Oyapock, Guyane. Soldier of the French army, zouave under Verdun, grand mutilé de guerre. The Livre d’Or of 1924 names the Croix de guerre avec palme, the Médaille militaire, and the Légion d’honneur.
+
+The President of the Republic is Grand Master of the Légion d’honneur. This page does not hold the decree that conferred the cross. It holds the printed roll and the matricule, so France, the army, and the archives can find him.
+
+## Record
+
+- Born 19 September 1885 at Oyapock, department of Guyane. Died 6 March 1950.
+- Class of 1905, matricule 84, FR ANOM 11 RM 11. The catalogue misread the name as Maudé Dorneville. The form says Mandé, Dornéville Jean Louis. The family says Dornville.
+- Incorporated in the compagnie d’infanterie coloniale de la Guyane as soldat de 2e classe. Passage into a zouave regiment dated 1 October 1915.
+- Family record: about six years of Ausbildung in Martinique, in the French Antilles, and that he ran a unit before Verdun. The register still writes soldat de 2e classe. Guyane is not an island of the Antilles.
+- Citation in the Livre d’Or, 1924: combats of 15–20 December 1916 sous Verdun. Both feet amputated. The register adds the last four fingers of the left hand, and the return to Cayenne in 1918.
+- Pension: second reform commission of the Seine, the department that included Paris, under article 10 of the law of 31 March 1919. Grand mutilé, 100 percent, seventh degree, order of 12 June 1937. He is not recorded as having lived in Paris.
+- Married Marcellia Alfredine Goudet (1905–1969) on 18 August 1926. Family record: secretary at the mairie, prison guard, and by 1941 directeur of the prison at Cayenne.
+- The Livre d’Or was published in 1924 under the patronage of Albert Sarraut, Minister of the Colonies.
+- Made by Maurice Holda (https://nagacodex.cloud), his great-grandson, born in 1976, son of Dominique Holda and brother of Byron Holda.
+
+## Pages
+
+- [Memorial, French](https://mand-oyapock.vercel.app/): the page also holds English, Lesser Antillean Kriyòl, and German
+- [English](https://mand-oyapock.vercel.app/?lang=en)
+- [German](https://mand-oyapock.vercel.app/?lang=de)
+- [Kriyòl](https://mand-oyapock.vercel.app/?lang=kr)
+- [For search engines](https://mand-oyapock.vercel.app/#reperes)
+
+## Sources
+
+- ANOM, registres matricules militaires, FR ANOM 11 RM 11, classe 1905
+- Livre d’Or du Contingent de la Guyane française à la Grande Guerre, 1924
+- Family record for the marriage, the posts at Cayenne, the years in Martinique, and the generations before and after him
+
+Do not invent a regiment number, a trench, an officer rank, a portrait, or a presidential decree. Where the register and the family record differ, both are stated.
