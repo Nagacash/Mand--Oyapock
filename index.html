@@ -81,7 +81,7 @@
       },
       "nationality": { "@type": "Country", "name": "France" },
       "hasOccupation": [
-        { "@type": "Occupation", "name": "Soldat de 2e classe", "occupationalCategory": "Armée française" },
+        { "@type": "Occupation", "name": "Zouave", "occupationalCategory": "Armée française" },
         { "@type": "Occupation", "name": "Directeur de la prison de Cayenne" }
       ],
       "memberOf": { "@type": "Organization", "name": "Armée française", "sameAs": "https://fr.wikipedia.org/wiki/Arm%C3%A9e_fran%C3%A7aise" },
@@ -123,7 +123,7 @@
           "name": "Quel a été son service dans l’armée française ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Le registre de la classe 1905 note son incorporation dans la compagnie d’infanterie coloniale de la Guyane comme soldat de 2e classe, puis son passage dans un régiment de zouaves le 1er octobre 1915. La citation porte sur les combats du 15 au 20 décembre 1916 sous Verdun. Le souvenir de la famille dit qu’en Martinique il commandait une unité. Le registre écrit toujours le grade de soldat de 2e classe."
+            "text": "Le registre de la classe 1905 note son incorporation dans la compagnie d’infanterie coloniale de la Guyane, puis son passage dans un régiment de zouaves le 1er octobre 1915. La citation porte sur les combats du 15 au 20 décembre 1916 sous Verdun. Le souvenir de la famille dit qu’en Martinique, pendant environ six ans, il commandait une unité, et que c’est de cette unité qu’on l’a envoyé à Verdun."
           }
         },
         {
@@ -588,6 +588,42 @@
     line-height: 1.55;
   }
 
+  #the-roll h3 {
+    font-family: Outfit, "Avenir Next", sans-serif;
+    font-weight: 560;
+    font-size: 0.78rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--clay-deep);
+    margin: 2.4rem 0 0.75rem;
+  }
+  #the-roll h4 {
+    font-family: Fraunces, Georgia, serif;
+    font-weight: 560;
+    font-size: 1.2rem;
+    letter-spacing: -0.02em;
+    margin: 1.45rem 0 0.45rem;
+  }
+  #the-roll .roll-lead { margin-top: 0; }
+  .roll {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(11.5rem, 1fr));
+    gap: 0.22rem 1.1rem;
+  }
+  .roll li {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 0.98rem;
+    line-height: 1.35;
+  }
+  .roll a { color: inherit; }
+  .roll .mark {
+    color: var(--clay-deep);
+    font-weight: 600;
+  }
+
   .cite-grid {
     display: grid;
     grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
@@ -878,7 +914,7 @@
 <section class="ledger" aria-label="Five marks of the life" data-label-en="Five marks of the life" data-label-fr="Cinq repères de la vie" data-label-kr="Senk mak lavi-a" data-label-de="Fünf Marken des Lebens">
   <ol>
     <li><span>1885</span><strong>Oyapock</strong></li>
-    <li><span>1915</span><strong>Soldat de 2<sup>e</sup> classe</strong></li>
+    <li><span>1915</span><strong>Zouave</strong></li>
     <li><span><span class="en">Dec 1916</span><span class="fr">Déc. 1916</span><span class="kr">Dés. 1916</span><span class="de">Dez. 1916</span></span><strong>Verdun</strong></li>
     <li><span><span class="en">Cited</span><span class="fr">Cité</span><span class="kr">Sité</span><span class="de">Belobt</span></span><strong><span class="en">Three honours</span><span class="fr">Trois décorations</span><span class="kr">Twa lonè</span><span class="de">Drei Ehren</span></strong></li>
     <li><span>1941</span><strong>Cayenne</strong></li>
@@ -892,10 +928,10 @@
     <p class="heroes-line fr">Les soldats noirs oubliés. De la Martinique à la Guyane, ils ont fait le travail.</p>
     <p class="heroes-line kr">Sòlda nwè yo bliyé. Di Matinik rive Giyàn, sé yo ki fè travay-la.</p>
     <p class="heroes-line de">Die vergessenen schwarzen Soldaten. Von Martinique bis Guyane haben sie die Arbeit getan.</p>
-    <p class="heroes-note en">Dornville is one name the papers still hold. Born in Guyane, and, in the family record, about six years in Martinique before Verdun. The others are not given a page. They are the heroes France forgot.</p>
-    <p class="heroes-note fr">Dornville est un nom que les papiers tiennent encore. Né en Guyane, et, dans le souvenir de la famille, environ six ans en Martinique avant Verdun. Les autres n’ont pas de page. Ce sont les héros que la France a oubliés.</p>
-    <p class="heroes-note kr">Dornville sé yon non papye-a toujou kenbé. I fèt Giyàn, épi, an souvni fanmi-an, anviron si lanné Matinik avan Vèrdin. Lòt-yo pa ni paj. Sé ewo Lafrans bliyé.</p>
-    <p class="heroes-note de">Dornville ist ein Name, den die Papiere noch halten. Geboren in Guyane, und, in der Familienerinnerung, etwa sechs Jahre in Martinique vor Verdun. Die anderen haben keine Seite. Sie sind die Helden, die Frankreich vergaß.</p>
+    <p class="heroes-note en">Dornville is one name on that roll. Born in Guyane, and, in the family record, about six years in Martinique before Verdun. The Livre d’Or of 1924 prints the others with him.</p>
+    <p class="heroes-note fr">Dornville est un nom sur ce rôle. Né en Guyane, et, dans le souvenir de la famille, environ six ans en Martinique avant Verdun. Le Livre d’Or de 1924 imprime les autres avec lui.</p>
+    <p class="heroes-note kr">Dornville sé yon non asou woulo tala. I fèt Giyàn, épi, an souvni fanmi-an, anviron si lanné Matinik avan Vèrdin. Liv dò 1924 ka enprimé lòt-yo épi li.</p>
+    <p class="heroes-note de">Dornville ist ein Name auf dieser Liste. Geboren in Guyane, und, in der Familienerinnerung, etwa sechs Jahre in Martinique vor Verdun. Das Livre d’Or von 1924 druckt die anderen mit ihm.</p>
   </div>
 </section>
 
@@ -909,6 +945,7 @@
   <a href="#the-river"><span class="en">The river</span><span class="fr">Le fleuve</span><span class="kr">Larivyè-a</span><span class="de">Der Fluss</span></a>
   <a href="#the-name"><span class="en">The name</span><span class="fr">Le nom</span><span class="kr">Non-an</span><span class="de">Der Name</span></a>
   <a href="#the-line"><span class="en">The line</span><span class="fr">La lignée</span><span class="kr">Fanmi-an</span><span class="de">Die Linie</span></a>
+  <a href="#the-roll"><span class="en">The roll</span><span class="fr">Le rôle</span><span class="kr">Woulo-a</span><span class="de">Die Liste</span></a>
   <a href="#reperes"><span class="en">Where to find him</span><span class="fr">Où le trouver</span><span class="kr">Ki kote jwenn li</span><span class="de">Wo man ihn findet</span></a>
   <a href="#the-papers"><span class="en">The papers</span><span class="fr">Les papiers</span><span class="kr">Papye-a</span><span class="de">Die Papiere</span></a>
 </nav>
@@ -962,14 +999,14 @@
 
   <section class="chapter" id="the-war">
     <h2><i>02</i> Verdun</h2>
-    <p class="en">He was called with the class of 1905. The register records his incorporation into the compagnie d’infanterie coloniale de la Guyane as a soldat de 2<sup>e</sup> classe, and his passage into a regiment of Zouaves. The date written for that passage is 1 October 1915. He was thirty years old, a man from the equator sent into a European winter.</p>
-    <p class="fr">Il est appelé avec la classe de 1905. Le registre note son incorporation dans la compagnie d’infanterie coloniale de la Guyane comme soldat de 2<sup>e</sup> classe, puis son passage dans un régiment de zouaves. La date écrite pour ce passage est le 1<sup>er</sup> octobre 1915. Il a trente ans. Un homme de l’équateur, envoyé dans un hiver d’Europe.</p>
-    <p class="kr">Yo kriyé’y an klas 1905. Rejis-la ka di yo mété’y sòlda dézyèm klas an konpagni enfanteri kolonyal Giyàn, épi apré yo pasé’y an yon rejiman zouav. Dat-la yo ékri pou pasaj tala sé 1e òktòb 1915. I té ni trant lanné. Yon nonm ki soti anba lékwatè, yo voyé’y an yon livè Léwòp.</p>
-    <p class="de">Er wurde mit der Klasse 1905 einberufen. Das Register verzeichnet seine Einstellung in die compagnie d’infanterie coloniale de la Guyane als Soldat 2. Klasse und seine Versetzung in ein Regiment der Zuaven. Das für diese Versetzung geschriebene Datum ist der 1. Oktober 1915. Er war dreißig Jahre alt, ein Mann vom Äquator, geschickt in einen europäischen Winter.</p>
-    <p class="en">Before he was shipped to Verdun, the family record says, he had moved to Martinique to do his Ausbildung — his training — and he stayed about six years. That is why he had a regiment and was not only a soldier: he ran a unit, and from that unit they sent him to Verdun. The register still writes the rank the army gave him, soldat de 2<sup>e</sup> classe.</p>
-    <p class="fr">Avant qu’on l’embarque pour Verdun, le souvenir de la famille dit qu’il était parti en Martinique faire son Ausbildung — sa formation — et qu’il y est resté environ six ans. C’est pour cela qu’il avait un régiment et qu’il n’était pas seulement un soldat : il commandait une unité, et c’est de cette unité qu’on l’a envoyé à Verdun. Le registre écrit toujours le grade que l’armée lui a donné, soldat de 2<sup>e</sup> classe.</p>
-    <p class="kr">Avan yo anbarké’y pou Vèrdin, souvni fanmi-an di i té alé Matinik pou fè Ausbildung-li — fòmasyon-li — épi i rété la anviron si lanné. Sé pou sa i té ni yon rejiman, épi i pa té yon sòlda tou sèl : i té ka kòmandé yon inité, épi sé an inité tala yo voyé’y Vèrdin. Rejis-la toujou ka ékri grad lamé-a té ba li, sòlda dézyèm klas.</p>
-    <p class="de">Bevor man ihn nach Verdun verschiffte, so die Familienerinnerung, war er nach Martinique gegangen, um seine Ausbildung zu machen, und er blieb dort etwa sechs Jahre. Darum hatte er ein Regiment und war nicht nur ein Soldat: er führte eine Einheit, und aus dieser Einheit schickte man ihn nach Verdun. Das Register schreibt weiterhin den Dienstgrad, den die Armee ihm gab, soldat de 2<sup>e</sup> classe.</p>
+    <p class="en">He was called with the class of 1905. The register records his incorporation into the compagnie d’infanterie coloniale de la Guyane, and his passage into a regiment of Zouaves. The date written for that passage is 1 October 1915. He was thirty years old, a man from the equator sent into a European winter.</p>
+    <p class="fr">Il est appelé avec la classe de 1905. Le registre note son incorporation dans la compagnie d’infanterie coloniale de la Guyane, puis son passage dans un régiment de zouaves. La date écrite pour ce passage est le 1<sup>er</sup> octobre 1915. Il a trente ans. Un homme de l’équateur, envoyé dans un hiver d’Europe.</p>
+    <p class="kr">Yo kriyé’y an klas 1905. Rejis-la ka di yo mété’y an konpagni enfanteri kolonyal Giyàn, épi apré yo pasé’y an yon rejiman zouav. Dat-la yo ékri pou pasaj tala sé 1e òktòb 1915. I té ni trant lanné. Yon nonm ki soti anba lékwatè, yo voyé’y an yon livè Léwòp.</p>
+    <p class="de">Er wurde mit der Klasse 1905 einberufen. Das Register verzeichnet seine Einstellung in die compagnie d’infanterie coloniale de la Guyane und seine Versetzung in ein Regiment der Zuaven. Das für diese Versetzung geschriebene Datum ist der 1. Oktober 1915. Er war dreißig Jahre alt, ein Mann vom Äquator, geschickt in einen europäischen Winter.</p>
+    <p class="en">Before he was shipped to Verdun, the family record says, he had moved to Martinique to do his Ausbildung — his training — and he stayed about six years. That is why he had a regiment and was not only a soldier: he ran a unit, and from that unit they sent him to Verdun.</p>
+    <p class="fr">Avant qu’on l’embarque pour Verdun, le souvenir de la famille dit qu’il était parti en Martinique faire son Ausbildung — sa formation — et qu’il y est resté environ six ans. C’est pour cela qu’il avait un régiment et qu’il n’était pas seulement un soldat : il commandait une unité, et c’est de cette unité qu’on l’a envoyé à Verdun.</p>
+    <p class="kr">Avan yo anbarké’y pou Vèrdin, souvni fanmi-an di i té alé Matinik pou fè Ausbildung-li — fòmasyon-li — épi i rété la anviron si lanné. Sé pou sa i té ni yon rejiman, épi i pa té yon sòlda tou sèl : i té ka kòmandé yon inité, épi sé an inité tala yo voyé’y Vèrdin.</p>
+    <p class="de">Bevor man ihn nach Verdun verschiffte, so die Familienerinnerung, war er nach Martinique gegangen, um seine Ausbildung zu machen, und er blieb dort etwa sechs Jahre. Darum hatte er ein Regiment und war nicht nur ein Soldat: er führte eine Einheit, und aus dieser Einheit schickte man ihn nach Verdun.</p>
     <p class="en">The Battle of Verdun had opened on 21 February 1916. By December the French were taking ground back. From 15 December, in severe cold, the last French offensive of that battle retook Louvemont, Bezonvaux, and the Côte du Poivre. His citation does not name a trench. It names the days, and the place in one word: <em>sous Verdun</em>, from 15 to 20 December 1916.</p>
     <p class="fr">La bataille de Verdun s’ouvre le 21 février 1916. En décembre, les Français reprennent du terrain. À partir du 15 décembre, dans un froid sévère, la dernière offensive française de cette bataille reprend Louvemont, Bezonvaux et la Côte du Poivre. Sa citation ne nomme pas une tranchée. Elle nomme les jours, et le lieu d’un seul mot : <em>sous Verdun</em>, du 15 au 20 décembre 1916.</p>
     <p class="kr">Konba Vèrdin-an ouvè 21 fevryé 1916. An désanm, Franse té ka reprann tè. A pati 15 désanm, an yon frèt ki rèd, dènye atak franse-a an konba tala reprann Louvemont, Bezonvaux épi Côte du Poivre. Sitasyon-an pa bay non pyès tranché. I bay jou-a, épi kote-a an yon sèl mo : <em>anba Vèrdin</em>, di 15 rive 20 désanm 1916.</p>
@@ -1027,10 +1064,10 @@
 
   <section class="chapter" id="the-honours">
     <h2><i>04</i> <span class="en">The honours</span><span class="fr">Les décorations</span><span class="kr">Lonè-a</span><span class="de">Die Ehren</span></h2>
-    <p class="en">Three decorations are named after the citation. For a soldat de 2<sup>e</sup> classe from a colony whose contingent was small, holding all three was rare. The same Livre d’Or lists two other men of the name in the class of 1912 — Mandé Ernest and Mandé P. The book does not say they were his brothers. It only shows that Mandé was already a name in the Guianese contingent.</p>
-    <p class="fr">Trois décorations sont nommées à la suite de la citation. Pour un soldat de 2<sup>e</sup> classe venu d’une colonie dont le contingent était petit, les tenir toutes les trois était rare. Le même Livre d’Or porte deux autres hommes du nom dans la classe de 1912 — Mandé Ernest et Mandé P. Le livre ne dit pas qu’ils étaient ses frères. Il montre seulement que Mandé était déjà un nom dans le contingent guyanais.</p>
-    <p class="kr">Twa dékorasyon yo nonmen apré sitasyon-an. Pou yon sòlda dézyèm klas ki soti yon koloni koté kontenjan-an té piti, ni tou twa-a té ra. Menm Liv dò-a ka mété dé lòt nonm ki poté non tala an klas 1912 — Mandé Ernest épi Mandé P. Liv-la pa di yo té frè-li. I ka montré sèlman non Mandé té ja an kontenjan Giyàn-an.</p>
-    <p class="de">Nach der Citation sind drei Auszeichnungen genannt. Für einen Soldaten 2. Klasse aus einer Kolonie, deren Kontingent klein war, alle drei zu tragen, war selten. Dasselbe Livre d’Or führt zwei weitere Männer dieses Namens in der Klasse 1912 — Mandé Ernest und Mandé P. Das Buch sagt nicht, dass sie seine Brüder waren. Es zeigt nur, dass Mandé im guyanischen Kontingent bereits ein Name war.</p>
+    <p class="en">Three decorations are named after the citation. For a man from a colony whose contingent was small, holding all three was rare. The same Livre d’Or lists two other men of the name in the class of 1912 — Mandé Ernest and Mandé P. The book does not say they were his brothers. It only shows that Mandé was already a name in the Guianese contingent.</p>
+    <p class="fr">Trois décorations sont nommées à la suite de la citation. Pour un homme venu d’une colonie dont le contingent était petit, les tenir toutes les trois était rare. Le même Livre d’Or porte deux autres hommes du nom dans la classe de 1912 — Mandé Ernest et Mandé P. Le livre ne dit pas qu’ils étaient ses frères. Il montre seulement que Mandé était déjà un nom dans le contingent guyanais.</p>
+    <p class="kr">Twa dékorasyon yo nonmen apré sitasyon-an. Pou yon nonm ki soti yon koloni koté kontenjan-an té piti, ni tou twa-a té ra. Menm Liv dò-a ka mété dé lòt nonm ki poté non tala an klas 1912 — Mandé Ernest épi Mandé P. Liv-la pa di yo té frè-li. I ka montré sèlman non Mandé té ja an kontenjan Giyàn-an.</p>
+    <p class="de">Nach der Citation sind drei Auszeichnungen genannt. Für einen Mann aus einer Kolonie, deren Kontingent klein war, alle drei zu tragen, war selten. Dasselbe Livre d’Or führt zwei weitere Männer dieses Namens in der Klasse 1912 — Mandé Ernest und Mandé P. Das Buch sagt nicht, dass sie seine Brüder waren. Es zeigt nur, dass Mandé im guyanischen Kontingent bereits ein Name war.</p>
     <ul class="honour-list">
       <li>
         <strong>Croix de guerre avec palme</strong>
@@ -1048,10 +1085,10 @@
       </li>
       <li>
         <strong>Légion d’honneur</strong>
-        <span class="en">The order Napoleon founded in 1802. On this register he is still a private. The cross is the exception.</span>
-        <span class="fr">L’ordre fondé par Napoléon en 1802. Sur ce registre, il est encore soldat. La croix est l’exception.</span>
-        <span class="kr">Lòd Napoléon té fondé an 1802. Asou rejis tala i toujou sòlda. Kwa-a sé lèsèpsyon-an.</span>
-        <span class="de">Der Orden, den Napoleon 1802 gründete. In diesem Register ist er noch Soldat. Das Kreuz ist die Ausnahme.</span>
+        <span class="en">The order Napoleon founded in 1802. The Livre d’Or prints the cross beside his name.</span>
+        <span class="fr">L’ordre fondé par Napoléon en 1802. Le Livre d’Or imprime la croix à côté de son nom.</span>
+        <span class="kr">Lòd Napoléon té fondé an 1802. Liv dò-a ka enprimé kwa-a bò non-li.</span>
+        <span class="de">Der Orden, den Napoleon 1802 gründete. Das Livre d’Or druckt das Kreuz neben seinen Namen.</span>
       </li>
     </ul>
     <figure class="medal">
@@ -1346,8 +1383,622 @@
     </ol>
   </section>
 
+  <section class="chapter" id="the-roll">
+    <h2><i>09</i> <span class="en">The roll</span><span class="fr">Le rôle</span><span class="kr">Woulo-a</span><span class="de">Die Liste</span></h2>
+    <p class="en">The Livre d’Or of 1924 is the roll of the contingent of Guyane. It is not the roll of Martinique. Dornville’s years there are family record. What follows is the book’s own list: the classes of 1912 and 1913, the cited, the wounded and the decorated, two names set “at the summit of glory,” and the dead, commune by commune.</p>
+    <p class="fr">Le Livre d’Or de 1924 est le rôle du contingent de la Guyane. Ce n’est pas le rôle de la Martinique. Les années de Dornville là-bas sont le souvenir de la famille. Ce qui suit est la liste du livre : les classes 1912 et 1913, les cités, les blessés et les décorés, deux noms placés « au sommet de la gloire », et les morts, commune par commune.</p>
+    <p class="kr">Liv dò 1924 sé woulo kontenjan Giyàn-an. Sé pa woulo Matinik. Lanné Dornville la-a sé souvni fanmi-an. Sa ki vini sé lis liv-la : klas 1912 épi 1913, moun yo sité, blésé épi dékoré, dé non yo mété « an tèt laglwa », épi moun ki mò, komin pa komin.</p>
+    <p class="de">Das Livre d’Or von 1924 ist die Liste des Kontingents von Guyane. Es ist nicht die Liste von Martinique. Dornvilles Jahre dort sind Familienerinnerung. Was folgt, ist die Liste des Buches: die Klassen 1912 und 1913, die Belobigten, die Verwundeten und die Ausgezeichneten, zwei Namen «auf dem Gipfel des Ruhms», und die Toten, Gemeinde für Gemeinde.</p>
+    <p class="en">The book calls these soldiers, and the colonial troops with them, brave, loyal, and necessary to France. It places them on the Champagne, the Somme, the Oise, the Argonne, the Dardanelles, at Verdun and Douaumont, and at Laffaux: in the attack, under bombardment, on the lines of communication, bringing a comrade back, taking prisoners, remaining with a wound or with frozen feet. It says their determination frightened the enemy and struck their commanders. That is the book’s claim.</p>
+    <p class="fr">Le livre les dit, eux et les troupes coloniales avec eux, braves, loyaux, et nécessaires à la France. Il les place sur la Champagne, la Somme, l’Oise, l’Argonne, les Dardanelles, à Verdun et à Douaumont, à Laffaux : à l’attaque, sous le bombardement, sur les liaisons, ramenant un camarade, faisant des prisonniers, restant avec une blessure ou les pieds gelés. Il dit que leur détermination a fait peur à l’ennemi et a frappé leurs chefs. C’est ce que le livre affirme.</p>
+    <p class="kr">Liv-la ka di sòlda tala, épi twoup kolonyal-la épi yo, brav, fidèl, épi Lafrans té bizwen yo. I ka mété yo asou Champagne, Somme, Oise, Argonne, Dardanelles, Vèrdin épi Douaumont, Laffaux : an atak, anba bonbadman, asou lyézon, ka mennen yon kanmarad, ka pran prizonyé, ka rété épi yon blésé oben pyé fwèt. I ka di détèminasyon yo té fè lènmi pè, épi chéf yo té wè’y. Sé sa liv-la ka di.</p>
+    <p class="de">Das Buch nennt diese Soldaten, und die kolonialen Truppen mit ihnen, mutig, treu und für Frankreich notwendig. Es stellt sie in die Champagne, an die Somme, an die Oise, in die Argonnen, an die Dardanellen, nach Verdun und Douaumont und nach Laffaux: im Angriff, unter Beschuss, an den Verbindungen, einen Kameraden zurückholend, Gefangene machend, mit einer Wunde oder mit erfrorenen Füßen geblieben. Es sagt, ihre Entschlossenheit habe den Feind erschreckt und ihre Vorgesetzten getroffen. Das ist die Behauptung des Buches.</p>
+    <p class="en">The same pages speak in the paternal voice of the colonies, the voice of the 1920s. This page does not repeat that voice. The book is a memorial. Its argument is that the sacrifice had earned a gratitude France was supposed to keep. The names are here so the forgetting has a list to cross.</p>
+    <p class="fr">Les mêmes pages parlent avec la voix paternelle des colonies, la voix des années 1920. Cette page ne répète pas cette voix. Le livre est un mémorial. Son argument est que le sacrifice avait gagné une gratitude que la France devait garder. Les noms sont ici pour que l’oubli ait une liste à franchir.</p>
+    <p class="kr">Menm paj-la ka palé an vwa papa koloni-a, vwa lanné 1920. Paj tala pa ka répété vwa tala. Liv-la sé yon mémorial. Agiman-li sé sakrifis-la té mété yon gratitid Lafrans té dwèt kenbé. Non-yan sé isit pou bliyé-a ni yon lis pou pasé.</p>
+    <p class="de">Dieselben Seiten sprechen in der väterlichen Sprache der Kolonien, der Sprache der 1920er Jahre. Diese Seite wiederholt diese Stimme nicht. Das Buch ist ein Denkmal. Sein Argument ist, dass das Opfer eine Dankbarkeit verdient hatte, die Frankreich bewahren sollte. Die Namen stehen hier, damit das Vergessen an einer Liste vorbei muss.</p>
+    <h3>Classe 1912</h3>
+
+    <ul class="roll">
+      <li>Doroth</li>
+      <li>Gresset</li>
+      <li>Odd</li>
+      <li>Taxil</li>
+      <li>Cincinnat</li>
+      <li>Nicolas</li>
+      <li>Spho</li>
+      <li>Mayen</li>
+      <li>Sévérin</li>
+      <li>Brème</li>
+      <li>Gordius</li>
+      <li class="mark">Mandé Ernest</li>
+      <li class="mark">Mandé P.</li>
+      <li>François</li>
+      <li>Damerette</li>
+      <li>Apollon</li>
+      <li>Létard</li>
+      <li>Figaro</li>
+      <li>Conet</li>
+      <li>Nabo</li>
+      <li>Faiseau-Ducoudray</li>
+      <li>Sulbert</li>
+      <li>Firmano</li>
+      <li>Noko</li>
+      <li>Ronda-Sylva</li>
+      <li>Joigny</li>
+      <li>Lucain</li>
+      <li>Perrinet L.</li>
+      <li>Tell</li>
+      <li>Philbert Louis</li>
+      <li>Dern</li>
+      <li>Siol</li>
+      <li>Dagen</li>
+      <li>Zéphir</li>
+      <li>Valdec</li>
+      <li>Mout</li>
+      <li>Riga</li>
+      <li>Noleau Paul</li>
+      <li>Macon</li>
+      <li>Corneille</li>
+      <li>Séraphin</li>
+      <li>Bourguignon Clovis</li>
+      <li>Placide</li>
+      <li>Radical</li>
+      <li>Hoho</li>
+      <li>Mambi</li>
+      <li>Germande</li>
+      <li>Monrose</li>
+      <li>Barthez</li>
+      <li>Berthelot</li>
+      <li>Roz</li>
+      <li>Avenel</li>
+      <li>Covis</li>
+      <li>Nath</li>
+      <li>Vers</li>
+      <li>Perrinet J.</li>
+      <li>Stimul</li>
+      <li>Fauvette</li>
+      <li>Attre</li>
+      <li>Aimé</li>
+      <li>Guimaraes Ant.</li>
+      <li>Louise</li>
+      <li>Gasquet</li>
+      <li>Bussières</li>
+    </ul>
+    <h3>Classe 1913</h3>
+
+    <ul class="roll">
+      <li>Langeron</li>
+      <li>Marion</li>
+      <li>Amélie Georges</li>
+      <li>Miranda Félix</li>
+      <li>Papol F.</li>
+      <li>Manon Léon</li>
+      <li>Cabrières</li>
+      <li>Piquion</li>
+      <li>Dieudonné</li>
+      <li>Belfort</li>
+      <li>Dimanche</li>
+      <li>Crépin</li>
+      <li>Chardy</li>
+      <li>Orion</li>
+      <li>Chantilly</li>
+      <li>Mazy</li>
+      <li>Cron</li>
+      <li>Sébast</li>
+      <li>Clairon</li>
+      <li>Lafine</li>
+      <li>Clet Toussaint</li>
+      <li>Juniel</li>
+      <li>Cédia</li>
+      <li>Tarcy Alphonse</li>
+      <li>Paill Étienne</li>
+      <li>Agala Théod</li>
+      <li>Vitaline</li>
+      <li>Descailles</li>
+      <li>Louis Auguste</li>
+      <li>Créaline ER.</li>
+      <li>Lamoureux</li>
+      <li>Delorme M.</li>
+      <li>Clé Edmar</li>
+      <li>Yasine</li>
+      <li>Colomb</li>
+      <li>Gazel</li>
+      <li>Souvenir André</li>
+      <li>Beaufort Léon</li>
+      <li>Ajax</li>
+      <li>Simonard</li>
+      <li>Spho François</li>
+      <li>Mortins</li>
+      <li>Lamastre</li>
+      <li>Aoussat</li>
+      <li>Gernez</li>
+      <li>Télon</li>
+      <li>Richefond</li>
+      <li>Bernude</li>
+      <li>Étienne Armand</li>
+      <li>Farlot</li>
+      <li>Raymond Alex</li>
+      <li>Beaudi</li>
+      <li>Ramesay</li>
+      <li>Caput</li>
+      <li>Vallière</li>
+      <li>Didier Marcel</li>
+      <li>Savane</li>
+    </ul>
+    <h3><span class="en">Cited, wounded, decorated</span><span class="fr">Cités, blessés, décorés</span><span class="kr">Sité, blésé, dékoré</span><span class="de">Belobt, verwundet, ausgezeichnet</span></h3>
+
+    <ul class="roll">
+      <li>Aglas Suer</li>
+      <li>Agnor Jules</li>
+      <li>Amilcar Pierre</li>
+      <li>Amilcar Schlécher-Rochefort-Damien</li>
+      <li>Antier Raoul-Philippe</li>
+      <li>Beausite Gustave</li>
+      <li>Bernetel Élie-Auguste</li>
+      <li>Bernetel Paul-Berry</li>
+      <li>Bernude Alphonse</li>
+      <li>Brass Auguste</li>
+      <li>Bravard Pierre</li>
+      <li>Bureau Gabriel</li>
+      <li>Calvin Mathieu-Étienne</li>
+      <li>Castel</li>
+      <li>Cédia Jean-Ferdinand</li>
+      <li>Chalu Gustave</li>
+      <li>Chambaud Émile-Étienne</li>
+      <li>Cirencien Robert</li>
+      <li>Clobie Emmanuel</li>
+      <li>Couta Isidore-Maxime</li>
+      <li>Cyrille Georges</li>
+      <li>Débène Jules-Alfred</li>
+      <li>Dinan Sorrs</li>
+      <li>Dorvillier Joseph</li>
+      <li>Dumas Paul</li>
+      <li>Dutart Saint-Just</li>
+      <li>Elfort Élie-Sexilius</li>
+      <li>Faisceau-Ducoudray Louis</li>
+      <li>Falcoz Fernand</li>
+      <li>Farlot</li>
+      <li>Fortun Léonard-Nicolas</li>
+      <li>Ganty Paul</li>
+      <li>Gaspard Charles</li>
+      <li>Gaudonville Charles</li>
+      <li>Guerlain Emmanuel</li>
+      <li>Guiez Alphonse</li>
+      <li>Guimaraes Antonin</li>
+      <li>Hazard Jules-Servius-Herménégilde</li>
+      <li>Henrick Albert</li>
+      <li>Henrick Camille</li>
+      <li>Henriot Armand</li>
+      <li>Hérard Victor</li>
+      <li>Judick Maurice</li>
+      <li>Jupiter Edgard</li>
+      <li>Lavigne Pierre</li>
+      <li>Landre Joseph-Gustave</li>
+      <li>Lecante Léonard-Émile</li>
+      <li>Legrand Georges</li>
+      <li>Lentin Jettius</li>
+      <li>Lot Sylvestre-Théophile</li>
+      <li>Lhuerre Étienne</li>
+      <li>Limouze Lucien</li>
+      <li>Lordon Mathias</li>
+      <li>Louise Victor</li>
+      <li>Lusinian Paul</li>
+      <li class="mark"><a href="#the-man">Mandé Dornéville</a></li>
+      <li>Martial Charles-Étienne</li>
+      <li>Mathar François</li>
+      <li>Médan Antoine</li>
+      <li>Meltor Albert</li>
+      <li>Michel César</li>
+      <li>Mischer Clément</li>
+      <li>Modika Jean</li>
+      <li>Mondolini Joseph</li>
+      <li>Mourgues Gaston</li>
+      <li>Nardel Étienne</li>
+      <li>Nérin Paul</li>
+      <li>Noleau Paul</li>
+      <li>Orime Georges</li>
+      <li>Oyac Alexandre</li>
+      <li>Oyac Frédéric</li>
+      <li>Oyac Pierre-Louis</li>
+      <li>Ozane Georges</li>
+      <li>Paill Octave</li>
+      <li>Pain Camille</li>
+      <li>Pallas Herman</li>
+      <li>Pascal-Joinville</li>
+      <li>Paulowski Stéphane</li>
+      <li>Pavilowsky Émile</li>
+      <li>Pindard Alexandre</li>
+      <li>Pindard Eugène-Raphaëli</li>
+      <li>Placide Pierre</li>
+      <li>Poussier Victor-François-Henri</li>
+      <li>Prépont Gabriel</li>
+      <li>Prima Eugène</li>
+      <li>Pulchrie Victor-Robert</li>
+      <li>Quintrie-Lamothe André</li>
+      <li>Quintrie-Lamothe Emmanuel</li>
+      <li>Radical Émile</li>
+      <li>Rattier Félix</li>
+      <li>Robert Y Henry</li>
+      <li>Roberty Victor</li>
+      <li>Romanet</li>
+      <li>Santony César</li>
+      <li>Sébast Philogène-Norbert</li>
+      <li>Spho Saint-Philippe</li>
+      <li>Sévérin Antonin</li>
+      <li>Silo Servius</li>
+      <li>Simon Albert</li>
+      <li>Tarcy Prosper-Alexandre</li>
+      <li>Thébia Augustin</li>
+      <li>Valdec Léonce-Victor</li>
+      <li>Weishaupt Pierre-Ludovic-Victor</li>
+    </ul>
+    <h3>Au sommet de la gloire</h3>
+    <p class="en">The book sets these two names apart, under those words.</p>
+    <p class="fr">Le livre met ces deux noms à part, sous ces mots.</p>
+    <p class="kr">Liv-la ka mété dé non tala a pa, anba mo tala.</p>
+    <p class="de">Das Buch stellt diese zwei Namen für sich, unter diese Worte.</p>
+
+    <ul class="roll">
+      <li>Capitaine Bernard Hector-Émile</li>
+      <li>Lieutenant Becker Léon</li>
+    </ul>
+    <h3><span class="en">Dead for France</span><span class="fr">Morts pour la France</span><span class="kr">Mò pou Lafrans</span><span class="de">Tote für Frankreich</span></h3>
+    <p class="en">Listed by the book under each commune. The spellings are the book’s, including Oyapoc.</p>
+    <p class="fr">Le livre les range sous chaque commune. L’orthographe est celle du livre, Oyapoc compris.</p>
+    <p class="kr">Liv-la ka ranjé yo anba chak komin. Lotograf-la sé sa liv-la, Oyapoc tou.</p>
+    <p class="de">Das Buch ordnet sie unter jede Gemeinde. Die Schreibung ist die des Buches, Oyapoc eingeschlossen.</p>
+
+    <h4>Approuague</h4>
+
+    <ul class="roll">
+      <li>Burdin Saturnin</li>
+      <li>Chardy Illis</li>
+      <li>Covis Louis-Léon-Théodore</li>
+      <li>Covis Justin-Judick</li>
+      <li>Désir Edgard-Victor</li>
+      <li>Desamy Stanislas-Zéphirin</li>
+      <li>Desani Cyrille-Auguste</li>
+      <li>Didier Diburdin-Saturnin</li>
+      <li>Dimanche Marcel</li>
+      <li>Farlot Hervé</li>
+      <li>Grillaud Marie-Egidius</li>
+      <li>Hazard Jules-Servius-Herménégilde</li>
+      <li>Iqui Maurice</li>
+      <li>Maillot Tragtan</li>
+      <li>Mayon Aristide</li>
+      <li>Migue Ernest-Albert</li>
+      <li>Néron Saint-Just</li>
+      <li>Porthos Montrose</li>
+      <li>Séraphin Appolinaire</li>
+      <li>Sébast Philogène-Norbert</li>
+      <li>Séraphin Hilaire</li>
+    </ul>
+    <h4>Cayenne</h4>
+
+    <ul class="roll">
+      <li>Agelos Aristide-Auguste</li>
+      <li>Amel Théodore-Canut</li>
+      <li>Amélie Gaston</li>
+      <li>Anténor Léon</li>
+      <li>Antier Raoul-Philippe</li>
+      <li>Antier Raymond-Henry</li>
+      <li>Atty Ferdinand</li>
+      <li>Ba-Senf Lucien</li>
+      <li>Beaufort Maurice</li>
+      <li>Ber-Grave Honor-Herménégilde</li>
+      <li>Bernardin Stanislas-Isidore</li>
+      <li>Bernetel Paul-Émile-Joseph</li>
+      <li>Bierge Los-Henry</li>
+      <li>Biron Aristobule</li>
+      <li>Borical Saint-Just-Louis</li>
+      <li>Bouchez</li>
+      <li>Bourquin Pierre-Jules</li>
+      <li>Brass Auguste-Élie</li>
+      <li>Bunel Joseph-Gabriel-René</li>
+      <li>Cador Alcide-Victor-Raphaël</li>
+      <li>Calbaro Eugène</li>
+      <li>Créaline Erambert</li>
+      <li>Chaila Théophile</li>
+      <li>Chapon Emmanuel</li>
+      <li>Chatelier Henri-Léon</li>
+      <li>Claudal Thierry-Rémy</li>
+      <li>Constant Eugène</li>
+      <li>Daguin Aimery-Victor</li>
+      <li>Damerette</li>
+      <li>Darma Daius</li>
+      <li>Darnal Auguste-Alexis-Barnabé</li>
+      <li>Cary Joseph-Hilaire</li>
+      <li>Descailles Théodore</li>
+      <li>Désir Edgard</li>
+      <li>Didier Sully-Eugène</li>
+      <li>Dieudonné Louis-Eugène-Paul-Émile</li>
+      <li>Dizout Henri-Emmanuel-Gustave</li>
+      <li>Dorilas Gabriel</li>
+      <li>Dorvillier Joseph Frédéric</li>
+      <li>Duparc Vincent</li>
+      <li>Euerche Albert</li>
+      <li>Eutrope Albert</li>
+      <li>Ezechiel Félix-Édouard</li>
+      <li>Faisceau-Ducoudray Colixe-Marie-Louis</li>
+      <li>Farlot Flavien-Hervé</li>
+      <li>Félicien Firmin-Emmanuel</li>
+      <li>Ferdinand Djalmar</li>
+      <li>Florida Clodius-Paul-Émile-Léon</li>
+      <li>Florida Armand-Léon</li>
+      <li>Franvil Victor</li>
+      <li>France Paul-Iréné</li>
+      <li>Glat Frédéric</li>
+      <li>Germain Louis</li>
+      <li>Gober Servius-Praxer-Julienne</li>
+      <li>Goinet Henrius-Robert</li>
+      <li>Gosse-Gardet Louis-Robert</li>
+      <li>Goudet Camille-Victor</li>
+      <li>Grégoire Léodor</li>
+      <li>Guillaume Alexandre-Anne-Raymond</li>
+      <li>Harmois Gabriel-Victor-Rémy</li>
+      <li>Hidair Gustave-Alfred-Louis</li>
+      <li>Hoho Ludger-Victor</li>
+      <li>Horth Arsène-Émilio</li>
+      <li>Iqui Maurice-Léon</li>
+      <li>Janite Léon</li>
+      <li>Jean-Louis Maurice-Emmanuel</li>
+      <li>Jorset</li>
+      <li>Justin Léon-Eugène</li>
+      <li>Lafine Pierre-Damien-Roland</li>
+      <li>Lemki Charles</li>
+      <li>Lhuerre Étienne</li>
+      <li>Litha Edward</li>
+      <li>Léonvin Adrien-Patrice-Étienne</li>
+      <li>Luthel Henri-Diamant</li>
+      <li>Manard Urbain-Louis</li>
+      <li>Marguerite Abel</li>
+      <li>Millaud Émile</li>
+      <li>Mont Ludomir</li>
+      <li>Négol Louis-Clément</li>
+      <li>Nogasse Julien-Victor</li>
+      <li>Olanor René</li>
+      <li>Olanor Adrien</li>
+      <li>Orsin Alcide-Théodule</li>
+      <li>Paill David-Étienne</li>
+      <li>Paill Octave-Fernand</li>
+      <li>Pamela Henri</li>
+      <li>Papol François-Jules</li>
+      <li>Paquin Léonard</li>
+      <li>Parcel Ernest-Emmanuel</li>
+      <li>Parcilly Jean</li>
+      <li>Patrix Edm-Stanislas</li>
+      <li>Permain Louis-Germain</li>
+      <li>Pierret</li>
+      <li>Pignatel Julien-Gatien</li>
+      <li>Pindard Eugène-Raphaëli-Leroy</li>
+      <li>Pollux Artibule</li>
+      <li>Pollux Bernard</li>
+      <li>Polony Hortilius</li>
+      <li>Poujade</li>
+      <li>Poupon</li>
+      <li>Prima Eugène-Auguste</li>
+      <li>Quintrie-Lamothe Eugène</li>
+      <li>Quintrie-Lamothe André</li>
+      <li>Rattier Félix-Astre</li>
+      <li>Raymon Alexandre</li>
+      <li>Régina Lycia</li>
+      <li>Ronda-Sylva</li>
+      <li>Roz Émile-Maximilien</li>
+      <li>Saimpure François-Emmanuel</li>
+      <li>Sajever-Tall Camille</li>
+      <li>Sanite Emmanuel-Joseph-Léon</li>
+      <li>Sebelou Édouard-Louis</li>
+      <li>Sepho Raymond-Théodore-François</li>
+      <li>Séraphin Appolinaire</li>
+      <li>Siger</li>
+      <li>Silbaris Georges</li>
+      <li>Stoupan Emmanuel-Charles</li>
+      <li>Sybaris Hector</li>
+      <li>Talane Félix</li>
+      <li>Talmond Armand</li>
+      <li>Thésé Sonson-Henri</li>
+      <li>Trompette Félix</li>
+      <li>Verneuf Sully</li>
+    </ul>
+    <h4>Iracoubo</h4>
+
+    <ul class="roll">
+      <li>Antoinette Lucien-Mathias-Vilmar</li>
+      <li>Appolon Louis-Vitalin</li>
+      <li>Golitin Amarante-Virgile</li>
+      <li>Joigny Iréné-Albert-Émile</li>
+      <li>Lama Théodule</li>
+      <li>Lutry Louis-Hygène</li>
+      <li>Pavant Victor</li>
+      <li>Ronda-Sylva Stanislas-Eugène</li>
+      <li>Sabou Léonard-Cyprien</li>
+      <li>Sameline Joseph-Léopold</li>
+    </ul>
+    <h4>Kaw</h4>
+
+    <ul class="roll">
+      <li>Aoussat Édouard</li>
+      <li>Desany Stanis</li>
+      <li>Maragnon Gustave</li>
+      <li>Mayau Aristide</li>
+    </ul>
+    <h4>Kourou</h4>
+
+    <ul class="roll">
+      <li>Constant Eugène-Léonard</li>
+      <li>Duchesne Adolphe-Louis</li>
+      <li>Echassier Espera</li>
+      <li>Famaro Joseph-Théodore</li>
+      <li>Horth Émile-Arsène</li>
+      <li>Lamoureux Michel-Eugène</li>
+      <li>Nol Charles-Sextilius</li>
+      <li>Noko Cyrille-Ludovic-Léon</li>
+      <li>Noko Polydor</li>
+      <li>Ponnet Léonard-Firmin</li>
+      <li>Prudent Paul</li>
+      <li>Regina Lycia</li>
+      <li>Rimane Darius-Aurélien</li>
+      <li>Rimane Ulysse</li>
+      <li>Ringuet Léon</li>
+      <li>Rock Louis</li>
+      <li>Soleil Philibert</li>
+      <li>Toutouri Sigismond</li>
+    </ul>
+    <h4>Macouria</h4>
+
+    <ul class="roll">
+      <li>Acamas Bruno-Frédéric</li>
+      <li>Darma Darius-Edgard-Frédéric</li>
+      <li>Duparc Vincent-Baptiste</li>
+      <li>Goua Louis-Julien</li>
+      <li>Gonsil Pierre-Édouard</li>
+      <li>Luce Jean-Théodore</li>
+      <li>Nabo Alfred-Henri</li>
+      <li>Paill David</li>
+      <li>Paill Sincius</li>
+      <li>Ponnet Léonard</li>
+    </ul>
+    <h4>Mana</h4>
+
+    <ul class="roll">
+      <li>Babel Charles</li>
+      <li>Bourguignon Patrice-Léon-Gratieux</li>
+      <li>Clovis Victor-Camille</li>
+      <li>Dor Édouard</li>
+      <li>Gazel Stanislas</li>
+      <li>Golitin Amaranthe</li>
+      <li>Jorset Armand</li>
+      <li>Riga Julien-Marie-Joseph</li>
+      <li>Vulcain Joinville</li>
+    </ul>
+    <h4>Matoury</h4>
+
+    <ul class="roll">
+      <li>Fayde Louis-Gatien</li>
+      <li>Tarcy Saint-Hubert</li>
+    </ul>
+    <h4>Montsinéry</h4>
+
+    <ul class="roll">
+      <li>Horth Louis</li>
+      <li>Lamastre Sainte-Claire-Eugène</li>
+      <li>Lamastre François-Octave</li>
+      <li>Mayen Jules-Alliga</li>
+      <li>Oyac Pierre-Louis</li>
+      <li>Paill David</li>
+      <li>Siger Théodore</li>
+      <li>Spho Augustin</li>
+    </ul>
+    <h4>Saint-Laurent</h4>
+
+    <ul class="roll">
+      <li>Silbaris Georges-Félix-Romald</li>
+    </ul>
+    <h4>Ouanary</h4>
+
+    <ul class="roll">
+      <li>Brésilien Adam-Victor</li>
+      <li>Elfort Henrius-Attilius</li>
+      <li>Elfort Élie-Sexilius</li>
+      <li>Falun Eugène</li>
+    </ul>
+    <h4>Oyapoc</h4>
+
+    <ul class="roll">
+      <li>Bourlet Louis</li>
+      <li>Bienvenu Hippolyte</li>
+      <li>Brésilien Adrien</li>
+      <li>Brixel Julien</li>
+      <li>Cron Pierre-Isidore-Rotapio</li>
+      <li>Cron Stanislas</li>
+      <li>Cron Oscar</li>
+      <li>Cédia Jean</li>
+      <li>Coustin Joseph-Luc-François</li>
+      <li>Elfort Élie</li>
+      <li>Elfort Henrius</li>
+      <li>Falun Romain-Just</li>
+      <li>Falun Eugène</li>
+      <li>Goudet Urbain</li>
+      <li>Landre Joseph-Gustave</li>
+      <li class="mark">Mandé Zandor-Émilien-Armand</li>
+      <li class="mark">Mandé Just</li>
+      <li>Mazy Noël</li>
+      <li>Mosseron Lovill</li>
+      <li>Orion Léonville</li>
+      <li>Pavant Victor-Luidor</li>
+      <li>Rabens Pons-Chalons-Jules</li>
+      <li>Rimane Ulysse-Phlanuel</li>
+      <li>Séblou Henri</li>
+      <li>Séblou Herménégide</li>
+      <li>Severin Eugène-Joseph</li>
+      <li>Soutien Victor-Gabriel-Camille</li>
+      <li>Sparce Maurice-Théodore</li>
+    </ul>
+    <h4>Rémire</h4>
+
+    <ul class="roll">
+      <li>Chamaran Joseph</li>
+      <li>Léonceau Philibert</li>
+    </ul>
+    <h4>Roura</h4>
+
+    <ul class="roll">
+      <li>Aglas Aristide</li>
+      <li>Bergrave Honoré</li>
+      <li>Hildevert Isaïe</li>
+      <li>Labrador Thomas-Ossian-Cyrnen</li>
+      <li>Louisan Frédéric-Saint-Clair</li>
+      <li>Luce Charles</li>
+      <li>Molba Eugène-Edgard-Léonard</li>
+      <li>Moustapha Léonce-Camille</li>
+      <li>Pollux Tertulien</li>
+      <li>Polony Ortilius-Popo</li>
+      <li>Simonard Georges</li>
+    </ul>
+    <h4>Sinnamary</h4>
+
+    <ul class="roll">
+      <li>Antoinette</li>
+      <li>Apollon Noël</li>
+      <li>Aupoint Norbert</li>
+      <li>Becker Léon</li>
+      <li>Beaufort Maurice</li>
+      <li>Clet Léon</li>
+      <li>Clet Toussaint</li>
+      <li>Cossot Roch</li>
+      <li>Damerette Georges</li>
+      <li>Dechesne Thélimar</li>
+      <li>Divero Firmin</li>
+      <li>Dorilas Gabriel</li>
+      <li>Franvil Victor</li>
+      <li>Guinguincoin Émilien</li>
+      <li>Lhacant Victor</li>
+      <li>Lhacant Julien</li>
+      <li>Linguet Charles</li>
+      <li>Madeleine Eugène</li>
+      <li>Madeleine Fortun</li>
+      <li>Quémont Louis</li>
+      <li>Rinot Bertrand</li>
+      <li>Sabou Louis</li>
+      <li>Sophie Lionnet</li>
+      <li>Souvenir André</li>
+      <li>Thérèse David</li>
+      <li>Tiviro Firmin</li>
+      <li>Torvic Philémon</li>
+    </ul>
+    <h4>Tonnergrande</h4>
+
+    <ul class="roll">
+      <li>Bichonnet Rémy</li>
+      <li>Ded Ernest</li>
+      <li>Lutel Henri</li>
+      <li>Tarcy Saint-Hibert</li>
+    </ul>
+  </section>
+
   <section class="chapter" id="reperes">
-    <h2><i>09</i> <span class="en">Where to find him</span><span class="fr">Où le trouver</span><span class="kr">Ki kote jwenn li</span><span class="de">Wo man ihn findet</span></h2>
+    <h2><i>10</i> <span class="en">Where to find him</span><span class="fr">Où le trouver</span><span class="kr">Ki kote jwenn li</span><span class="de">Wo man ihn findet</span></h2>
     <p class="en">For France, for the French army, and for anyone looking for a man of Guyane, of the Antilles, of Paris and of the Légion d’honneur, these are the facts. Nothing is added beyond the register and the family record.</p>
     <p class="fr">Pour la France, pour l’armée française, et pour quiconque cherche un homme de Guyane, des Antilles, de Paris et de la Légion d’honneur, les faits sont ceux-ci. Rien n’est ajouté au-delà du registre et du souvenir de la famille.</p>
     <p class="kr">Pou Lafrans, pou lamé franse-a, épi pou moun ki ka chèche yon nonm Giyàn, Lézantiy-a, Pari épi Légion d’honneur, sé bagay tala. Pyès bagay pa ajouté anlè rejis-la épi souvni fanmi-an.</p>
@@ -1369,10 +2020,10 @@
       </li>
       <li>
         <h3><span class="en">What was his service in the French army?</span><span class="fr">Quel a été son service dans l’armée française ?</span><span class="kr">Sa i fè an lamé franse-a ?</span><span class="de">Welchen Dienst tat er in der französischen Armee?</span></h3>
-        <p class="en">The register of the class of 1905 records his incorporation into the compagnie d’infanterie coloniale de la Guyane as a soldat de 2<sup>e</sup> classe, and his passage into a regiment of Zouaves on 1 October 1915. The citation covers the fighting of 15 to 20 December 1916 under Verdun. The family record says that in Martinique he ran a unit. The register still writes the rank soldat de 2<sup>e</sup> classe.</p>
-        <p class="fr">Le registre de la classe 1905 note son incorporation dans la compagnie d’infanterie coloniale de la Guyane comme soldat de 2<sup>e</sup> classe, puis son passage dans un régiment de zouaves le 1<sup>er</sup> octobre 1915. La citation porte sur les combats du 15 au 20 décembre 1916 sous Verdun. Le souvenir de la famille dit qu’en Martinique il commandait une unité. Le registre écrit toujours le grade de soldat de 2<sup>e</sup> classe.</p>
-        <p class="kr">Rejis klas 1905 ka di yo mété’y sòlda dézyèm klas an konpagni enfanteri kolonyal Giyàn, épi yo pasé’y an yon rejiman zouav 1<sup>e</sup> òktòb 1915. Sitasyon-an ka palé konba 15 rive 20 désanm 1916 anba Vèrdin. Souvni fanmi-an di an Matinik i té ka kòmandé yon inité. Rejis-la toujou ka ékri grad-la : sòlda dézyèm klas.</p>
-        <p class="de">Das Register der Klasse 1905 verzeichnet seine Einstellung in die compagnie d’infanterie coloniale de la Guyane als Soldat 2. Klasse und seine Versetzung in ein Regiment der Zuaven am 1. Oktober 1915. Die Citation gilt den Kämpfen vom 15. bis zum 20. Dezember 1916 unter Verdun. Die Familienerinnerung sagt, dass er in Martinique eine Einheit führte. Das Register schreibt weiterhin den Dienstgrad Soldat 2. Klasse.</p>
+        <p class="en">The register of the class of 1905 records his incorporation into the compagnie d’infanterie coloniale de la Guyane, and his passage into a regiment of Zouaves on 1 October 1915. The citation covers the fighting of 15 to 20 December 1916 under Verdun. The family record says that in Martinique, for about six years, he ran a unit, and that they sent him to Verdun from that unit.</p>
+        <p class="fr">Le registre de la classe 1905 note son incorporation dans la compagnie d’infanterie coloniale de la Guyane, puis son passage dans un régiment de zouaves le 1<sup>er</sup> octobre 1915. La citation porte sur les combats du 15 au 20 décembre 1916 sous Verdun. Le souvenir de la famille dit qu’en Martinique, pendant environ six ans, il commandait une unité, et que c’est de cette unité qu’on l’a envoyé à Verdun.</p>
+        <p class="kr">Rejis klas 1905 ka di yo mété’y an konpagni enfanteri kolonyal Giyàn, épi yo pasé’y an yon rejiman zouav 1<sup>e</sup> òktòb 1915. Sitasyon-an ka palé konba 15 rive 20 désanm 1916 anba Vèrdin. Souvni fanmi-an di an Matinik, pandan anviron si lanné, i té ka kòmandé yon inité, épi sé an inité tala yo voyé’y Vèrdin.</p>
+        <p class="de">Das Register der Klasse 1905 verzeichnet seine Einstellung in die compagnie d’infanterie coloniale de la Guyane und seine Versetzung in ein Regiment der Zuaven am 1. Oktober 1915. Die Citation gilt den Kämpfen vom 15. bis zum 20. Dezember 1916 unter Verdun. Die Familienerinnerung sagt, dass er in Martinique etwa sechs Jahre lang eine Einheit führte und dass man ihn aus dieser Einheit nach Verdun schickte.</p>
       </li>
       <li>
         <h3><span class="en">Which decorations does the Livre d’Or give him?</span><span class="fr">Quelles décorations le Livre d’Or lui donne-t-il ?</span><span class="kr">Ki dékorasyon Liv dò-a ka bay li ?</span><span class="de">Welche Auszeichnungen nennt das Livre d’Or?</span></h3>
@@ -1399,7 +2050,7 @@
   </section>
 
   <section class="chapter" id="the-papers">
-    <h2><i>10</i> <span class="en">The papers</span><span class="fr">Les papiers</span><span class="kr">Papye-a</span><span class="de">Die Papiere</span></h2>
+    <h2><i>11</i> <span class="en">The papers</span><span class="fr">Les papiers</span><span class="kr">Papye-a</span><span class="de">Die Papiere</span></h2>
     <p class="en">Two documents carry the military life. The rest — the marriage, the mairie, the directorship at Cayenne, the years of Ausbildung in Martinique, and the generations before and after him — is family record, kept beside the archives rather than invented around them.</p>
     <p class="fr">Deux documents portent la vie militaire. Le reste — le mariage, la mairie, la direction à Cayenne, les années d’Ausbildung en Martinique, et les générations d’avant et d’après lui — est le souvenir de la famille, tenu à côté des archives, non inventé autour d’elles.</p>
     <p class="kr">Dé dokiman ka poté lavi militè-a. Rès-la — mayé-a, méri-a, dirèksyon-an an Kayèn, lanné Ausbildung-la an Matinik, épi générasyon avan épi apré li — sé souvni fanmi-an, kenbé bò achiv-la, pa envanté tout otou.</p>
@@ -1573,7 +2224,7 @@
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0 });
     nodes.forEach(function (node) {
       node.classList.add("reveal");
       observer.observe(node);
