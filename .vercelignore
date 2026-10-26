@@ -4,3 +4,6 @@
 .punani/
 .surface-brief-index.md
 *.png
+!favicon-32.png
+!icon-192.png
+!apple-touch-icon.png
